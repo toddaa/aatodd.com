@@ -32,7 +32,7 @@ class Topbar extends Component {
 	}
 	render() {
 		return (
-				<nav id="topbar" className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top d-sm-none">
+				<nav id="topbar" className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top d-md-none">
 					<Link to='/' className="navbar-brand" onClick={this.handleClick}><Avatar src="A736416D-1265-43E8-BD43-EA3061A13A79.JPG" name="Aaron Todd" round={true} size={40} /> Aaron Todd</Link>
 					<button className="navbar-toggler" type="button" onClick={this.handleClick} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span className="navbar-toggler-icon"></span>

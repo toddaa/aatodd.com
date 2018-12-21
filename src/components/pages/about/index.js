@@ -7,7 +7,7 @@ class AboutPage extends Component {
 		return (
 			<div className="container-fluid h-100 content about">
 				<div className="row h-100">
-					<div className="col-12 col-sm-9 offset-sm-1">
+					<div className="col-12 col-md-9 offset-md-1">
 						<h1>About</h1>
 						<p>
 							I'm Aaron, a software developer from the Lansing, Michigan area.

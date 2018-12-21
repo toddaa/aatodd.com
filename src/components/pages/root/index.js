@@ -13,7 +13,7 @@ class RootPage extends Component {
 		return (
 				<div className="container-fluid h-100 content root">
 					<div className="row h-100">
-						<div className="col-12 col-sm-9 offset-sm-1">
+						<div className="col-12 col-md-9 offset-md-1">
 							<h1>Hello World!</h1>
 							<h4>
 								Welcome to the site.

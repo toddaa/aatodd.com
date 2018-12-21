@@ -21,7 +21,7 @@ class Sidebar extends Component {
 
 	render() {
 		return (
-				<nav id="sidebar" className="d-none d-sm-block">
+				<nav id="sidebar" className="d-none d-md-block d-print-none">
 					<div className="sidebar-header">
 						<Link to='/'><Avatar src="A736416D-1265-43E8-BD43-EA3061A13A79.JPG" name="Aaron Todd" round={true} size={100} style={{margin:'1em'}} /></Link>
 						<Link to='/'><h4>Aaron Todd</h4></Link>

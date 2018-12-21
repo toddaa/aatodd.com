@@ -1,0 +1,25 @@
+#topbar {
+	/* position: fixed; */
+	/* top: 0; */
+	/* left: 0; */
+	/* height: 100vh; */
+	/* z-index: 999; */
+	/* background: rgb(59, 59, 59); */
+	color: #fff;
+	transition: all 0.3s;
+}
+#topbar.bg-dark{
+    background: rgb(59, 59, 59) !important;
+}
+
+#topbar .nav-item{
+    text-align:center;
+    font-size:1.5em;
+}
+
+#topbar div.social{
+	text-align:center;
+}
+#topbar div.social a{
+	color: #fff;
+}

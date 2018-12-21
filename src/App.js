@@ -1,28 +1,30 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import RootPage from './components/pages/root';
+import AboutPage from './components/pages/about';
+import Error404 from './components/pages/404';
+import Sidebar from './components/sidebar';
+import Topbar from './components/topbar';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<Router>
+				<div>
+					<Topbar />
+					<div className="wrapper">
+						<Sidebar />
+						<Switch>
+							<Route exact path='/' component={RootPage} />
+							<Route path='/about' component={AboutPage} />
+							<Route component={Error404} />
+						</Switch>
+					</div>
+				</div>
+			</Router>
+		);
+	}
 }
 
 export default App;

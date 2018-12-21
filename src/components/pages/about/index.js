@@ -32,7 +32,7 @@ class AboutPage extends Component {
 							It's always exciting to mix things up and develop new methods that work best for a team.
 						</p>
 						<p>
-							In my spare time I love spending time with my wife, Alison, and am heavily involved with our three children Samatha, Connor, and Emma and their scouting adventures.
+							In my spare time I love spending time with my wife, Alison, and am heavily involved with our three children Samantha, Connor, and Emma and their scouting adventures.
 							Being an Eagle Scout, I was raised learning how to be a service oriented leader.
 							Jumping back in to those programs for the next generation, in my mind, is a welcome oportunity.
 							Any scouting program will help mold the future of a child, and I want mine to learn to be bold in service to others.

@@ -19,4 +19,7 @@ body,html,{
 	.wrapper {
 		padding-left:0 !important;
 	}
+	.content{
+		margin-top:60px;
+	}
 }

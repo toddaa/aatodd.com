@@ -7,17 +7,29 @@
 	/* background: rgb(59, 59, 59); */
 	color: #fff;
 	transition: all 0.3s;
+	padding:0px !important;
 }
 #topbar.bg-dark{
     background: rgb(59, 59, 59) !important;
 }
-
+#topbar .navbar-brand{
+	padding:.3125rem 1rem;
+}
 #topbar .nav-item{
     text-align:center;
 }
 @media screen and (max-width: 575px) {
 	#topbar .nav-item{
 		font-size:1.3em;
+	}
+}
+@media screen and (min-width: 576px) {
+	#topbar a.active{
+		background: #a7a7a7;
+		color:#000000;
+		font-weight: bold;
+		border-bottom: #ff6700a6 .3em solid;
+		border-top: #a7a7a7 .3em solid;
 	}
 }
 

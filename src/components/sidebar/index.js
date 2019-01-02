@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitterSquare, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Avatar from 'react-avatar';
 import './sidebar.css';
+import Environment from '../environment';
 
 const iconLinkedin = (
 	<FontAwesomeIcon icon={faLinkedin} className="fa-fw fa-lg" />
@@ -31,6 +32,9 @@ class Sidebar extends Component {
 						<li>
 							<NavLink className="nav-link" to='/about' activeClassName="active">About</NavLink>
 						</li>
+						<li>
+							<NavLink className="nav-link" to='/work' activeClassName="active">Work</NavLink>
+						</li>
 						{/* <li>
 							<NavLink className="nav-link" to='/blog' onClick={this.toggle} activeClassName="active">Blog</NavLink>
 						</li>
@@ -43,6 +47,7 @@ class Sidebar extends Component {
 						<a href="http://github.com/toddaa">{iconGithub}</a>
 						<a href="http://linkedin.com/in/toddaa">{iconLinkedin}</a>
 					</div>
+					<Environment />
 				</nav>
 		)
 	}

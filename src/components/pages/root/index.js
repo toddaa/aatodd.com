@@ -14,7 +14,13 @@ class RootPage extends Component {
 								Welcome to the site.
 							</h4>
 							<p>
-								I've got lots to offer here and plan to have plenty more in the future.
+								I've got lots to offer here, and plan to have plenty more in the future.
+								Sharing my thoughts is a new endeavor.
+								It's my hope that you will find something useful here.
+								So please, allow me to stir the pot...
+							</p>
+							<p>
+								Shoot me a DM on <a href="http://twitter.com/toddaa">Twitter</a> if you'd like to discuss anything further.
 							</p>
 							{/* <p>
 								I consider myself and IT generalist.

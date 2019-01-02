@@ -1,11 +1,6 @@
 import React, { Component } from 'react';
 import './root_page.css';
-
-const ContentRoot = () => (
-	<section className="welcome">
-
-	</section>
-);
+import Environment from '../../environment';
 
 class RootPage extends Component {
 	render() {
@@ -38,6 +33,7 @@ class RootPage extends Component {
 							</p> */}
 						</div>
 					</div>
+					<Environment />
 				</div>
 		)
 	}

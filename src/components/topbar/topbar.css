@@ -16,7 +16,7 @@
 	padding:.3125rem 1rem;
 }
 #topbar .nav-item{
-    text-align:center;
+	text-align:center;
 }
 @media screen and (max-width: 575px) {
 	#topbar .nav-item{
@@ -24,6 +24,10 @@
 	}
 }
 @media screen and (min-width: 576px) {
+	#topbar a.nav-link{
+		border-bottom: rgb(59, 59, 59) .3em solid;
+		border-top: rgb(59, 59, 59) .3em solid;
+	}
 	#topbar a.active{
 		background: #a7a7a7;
 		color:#000000;

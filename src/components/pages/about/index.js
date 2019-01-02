@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './about.css';
+import Environment from '../../environment';
 
 class AboutPage extends Component {
 	render() {
@@ -40,6 +41,7 @@ class AboutPage extends Component {
 						</p>
 					</div>
 				</div>
+				<Environment />
 			</div>
 		)
 	}

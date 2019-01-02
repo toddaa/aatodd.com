@@ -1,0 +1,19 @@
+div.design{
+	text-align:center;
+	padding:1em;
+	bottom: 0;
+	width: 100%;
+}
+
+#sidebar div.design{
+	position: absolute;
+	color: #5b5b5b;
+}
+.content div.design{
+	color:#d2d2d2;
+}
+@media screen and (min-width: 768px) {
+	.content div.design{
+		display:none;
+	}
+}

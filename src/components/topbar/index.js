@@ -48,9 +48,9 @@ class Topbar extends Component {
 							<li className="nav-item">
 								<NavLink className="nav-link" to='/about' onClick={this.handleClick} activeClassName="active">About</NavLink>
 							</li>
-							<li className="nav-item">
+							{/* <li className="nav-item">
 								<NavLink className="nav-link" to='/work' onClick={this.handleClick} activeClassName="active">Work</NavLink>
-							</li>
+							</li> */}
 						</ul>
 						<div className="social">
 							<a href="http://twitter.com/toddaa">{iconTwitter}</a>

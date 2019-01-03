@@ -32,9 +32,9 @@ class Sidebar extends Component {
 						<li>
 							<NavLink className="nav-link" to='/about' activeClassName="active">About</NavLink>
 						</li>
-						<li>
+						{/* <li>
 							<NavLink className="nav-link" to='/work' activeClassName="active">Work</NavLink>
-						</li>
+						</li> */}
 						{/* <li>
 							<NavLink className="nav-link" to='/blog' onClick={this.toggle} activeClassName="active">Blog</NavLink>
 						</li>

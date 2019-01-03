@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import './App.css';
 import RootPage from './components/pages/root';
 import AboutPage from './components/pages/about';
 import WorkPage from './components/pages/work';
+import BlogPage from './components/pages/blog';
 import Error404 from './components/pages/404';
 import Sidebar from './components/sidebar';
 import Topbar from './components/topbar';
+
+
+ReactGA.initialize('UA-131576285-1');
+ReactGA.pageview(window.location.pathname);
 
 class App extends Component {
 	render() {

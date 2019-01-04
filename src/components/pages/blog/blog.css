@@ -1,0 +1,35 @@
+div.blog div.articles{
+	margin-top: 2em;
+	margin-left:1em;
+}
+
+div.blog section.article{
+	padding-bottom: 2em;
+}
+
+div.blog section.article a{
+	color:#000000;
+}
+
+div.blog section.article p{
+	font-size:1em;
+}
+
+div.blog section.article h5.title{
+	font-weight:500;
+}
+
+div.blog section.article p.date{
+	font-size:.8em;
+	font-weight:400;
+}
+
+div.blog section.article p.desc{
+
+}
+
+div.blog section.article p.more{
+	font-size:.8em;
+	text-decoration: underline
+
+}

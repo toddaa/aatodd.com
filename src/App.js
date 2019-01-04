@@ -25,15 +25,24 @@ const pages = [
 ]
 
 function PageRoutes(props) {
+	let hasBlog = false;
 	let dynamic_routes = props.pages.map((page, i) => {
+		let rendered = "";
 		if (page.auth || process.env.NODE_ENV === 'development'){
-			//console.log("add route: " + page.name)
-			return <Route key={i} path={page.path} component={page.component} />;
+			if (page.path === '/blog'){
+				hasBlog = true;
+			}
+			rendered = <Route key={i} path={page.path} component={page.component} />;
 		}
+		return rendered;
 	});
 
 	let blog_routes = props.articles.map((article, i) => {
-		return <Route key={i} path={article.path} render={(props) => <ArticlePage {...props} article={article} />} />;
+		let rendered = "";
+		if (hasBlog){
+			rendered = <Route key={i} path={article.path} render={(props) => <ArticlePage {...props} article={article} />} />;
+		}
+		return rendered;
 	})
 
 	return (

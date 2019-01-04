@@ -18,6 +18,15 @@ const iconTwitter = (
 	<FontAwesomeIcon icon={faTwitterSquare} className="fa-fw fa-lg" />
 );
 
+function TopBarNavButton(props) {
+	const isAllowed = props.isAllowed;
+	let rendered = "";
+	if (isAllowed || process.env.NODE_ENV === 'development') {
+		rendered = <li className="nav-item"><NavLink className="nav-link" to={props.path} onClick={props.onClick} activeClassName="active">{props.text}</NavLink></li>;
+	}
+	return rendered;
+}
+
 class Topbar extends Component {
 	constructor(props) {
 		super(props);
@@ -36,6 +45,9 @@ class Topbar extends Component {
 		this.setState({showMenu : false});
 	}
 	render() {
+		const navContent = this.props.content.map((page, i) =>
+			<TopBarNavButton key={i} text={page.name} path={page.path} onClick={this.toggle} isAllowed={page.auth} />
+		);
 		return (
 				<nav id="topbar" className="navbar navbar-expand-sm navbar-dark bg-dark fixed-top d-md-none">
 					<Link to='/' className="navbar-brand" onClick={this.handleBrandClick}><Avatar src="A736416D-1265-43E8-BD43-EA3061A13A79.JPG" name="Aaron Todd" round={true} size={40} /> Aaron Todd</Link>
@@ -45,12 +57,7 @@ class Topbar extends Component {
 
 					<div className={'navbar-collapse ' + classnames({ collapse: this.state.showMenu === false })} id="navbarSupportedContent">
 						<ul className="navbar-nav mr-auto">
-							<li className="nav-item">
-								<NavLink className="nav-link" to='/about' onClick={this.handleClick} activeClassName="active">About</NavLink>
-							</li>
-							<li className="nav-item">
-								<NavLink className="nav-link" to='/work' onClick={this.handleClick} activeClassName="active">Work</NavLink>
-							</li>
+							{navContent}
 						</ul>
 						<div className="social">
 							<a href="http://twitter.com/toddaa">{iconTwitter}</a>

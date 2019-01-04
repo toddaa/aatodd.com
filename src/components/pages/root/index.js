@@ -15,8 +15,7 @@ class RootPage extends Component {
 							</h4>
 							<p>
 								I've got lots to offer here, and plan to have plenty more in the future.
-								Sharing my thoughts is a new endeavor.
-								It's my hope that you will find something useful here.
+								Sharing my thoughts is a new endeavor, and it is my hope that you will find something useful here.
 								So please, allow me to stir the pot...
 							</p>
 							<p>

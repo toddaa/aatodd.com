@@ -18,9 +18,24 @@ const iconTwitter = (
 	<FontAwesomeIcon icon={faTwitterSquare} className="fa-fw fa-lg" />
 );
 
-class Sidebar extends Component {
+function SideBarNavButton(props) {
+	const isAllowed = props.isAllowed;
+	let rendered = "";
+	if (isAllowed || process.env.NODE_ENV === 'development') {
+		rendered = <li><NavLink className="nav-link" to={props.path} onClick={props.onClick} activeClassName="active">{props.text}</NavLink></li>;
+	}
+	return rendered;
+}
 
+class Sidebar extends Component {
+	// constructor(props) {
+	// 	super(props);
+	// 	//console.log(props)
+	// }
 	render() {
+		const navContent = this.props.content.map((page, i) =>
+			<SideBarNavButton key={i} text={page.name} path={page.path} onClick={this.toggle} isAllowed={page.auth} />
+		);
 		return (
 				<nav id="sidebar" className="d-none d-md-block d-print-none">
 					<div className="sidebar-header">
@@ -29,18 +44,7 @@ class Sidebar extends Component {
 					</div>
 
 					<ul className="list-unstyled components">
-						<li>
-							<NavLink className="nav-link" to='/about' activeClassName="active">About</NavLink>
-						</li>
-						<li>
-							<NavLink className="nav-link" to='/work' activeClassName="active">Work</NavLink>
-						</li>
-						{/* <li>
-							<NavLink className="nav-link" to='/blog' onClick={this.toggle} activeClassName="active">Blog</NavLink>
-						</li>
-						<li>
-							<NavLink className="nav-link" to='/contact' onClick={this.toggle} activeClassName="active">Contact</NavLink>
-						</li> */}
+						{navContent}
 					</ul>
 					<div className="social">
 						<a href="http://twitter.com/toddaa">{iconTwitter}</a>

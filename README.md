@@ -1,33 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hey there!
+This is the code for my personal site.  I've spent quite a bit of time learning and playing with React lately, but I've found that there are so many tools out there to eliminate the mundane of setting up the environment.  So I bootstrapped this with [Create React App](https://github.com/facebook/create-react-app) as I do with many projects these days.  I've left the original scripts below in place, but have added more at the end for my needs.
 
-## Available Scripts
+I'm trying hard not to `eject` from this setup, but the extra flexibility and the interest to remind myself what's under the hood has me really considering otherwise.
+
+### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+##### `npm start`
 
-Runs the app in the development mode.<br>
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br>
+The page will reload if you make edits.
 You will also see any lint errors in the console.
 
-### `npm test`
+##### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+##### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+##### `npm run eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
@@ -37,8 +40,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+##### `npm run deploy-dev`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Runs the previously defined build script and deploys everything in the `build` directory to my AWS S3 bucket used for testing.  This allows me to test my code on the AWS environment once last time before deploying to production.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### `npm run deploy-prod`
+
+Runs the previously defined build script and deploys everything in the `build` directory to my AWS S3 bucket used for production.  This will also invalidate the associated AWS CloudFront distrobution so that the edge locations know theres something new out there to cache and serve up to users.

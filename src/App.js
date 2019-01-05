@@ -6,9 +6,12 @@ import RootPage from './components/pages/root';
 import AboutPage from './components/pages/about';
 import WorkPage from './components/pages/work';
 import BlogPage from './components/pages/blog';
+import ArticlePage from './components/pages/article';
 import Error404 from './components/pages/404';
 import Sidebar from './components/sidebar';
 import Topbar from './components/topbar';
+
+import articles from './articles.json';
 
 
 ReactGA.initialize('UA-131576285-1');
@@ -22,19 +25,34 @@ const pages = [
 ]
 
 function PageRoutes(props) {
-	let variable = pages.map((page, i) => {
-			if (page.auth || process.env.NODE_ENV === 'development'){
-				//console.log("add route: " + page.name)
-				return <Route key={i} path={page.path} component={page.component} />;
+	let hasBlog = false;
+	let dynamic_routes = props.pages.map((page, i) => {
+		let rendered = "";
+		if (page.auth || process.env.NODE_ENV === 'development'){
+			if (page.path === '/blog'){
+				hasBlog = true;
 			}
+			rendered = <Route key={i} path={page.path} component={page.component} />;
 		}
-	);
+		return rendered;
+	});
 
-	return <Switch>
+	let blog_routes = props.articles.map((article, i) => {
+		let rendered = "";
+		if (hasBlog){
+			rendered = <Route key={i} path={article.path} render={(props) => <ArticlePage {...props} article={article} />} />;
+		}
+		return rendered;
+	})
+
+	return (
+		<Switch>
 			<Route exact path='/' component={RootPage} />
-			{variable}
+			{dynamic_routes}
+			{blog_routes}
 			<Route component={Error404} />
-		</Switch>;
+		</Switch>
+	);
 }
 
 class App extends Component {
@@ -45,7 +63,7 @@ class App extends Component {
 					<Topbar content={pages} />
 					<div className="wrapper">
 						<Sidebar content={pages} />
-						<PageRoutes content={pages}/>
+						<PageRoutes pages={pages} articles={articles}/>
 					</div>
 				</div>
 			</Router>

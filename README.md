@@ -3,6 +3,10 @@ This is the code for my personal site.  I've spent quite a bit of time learning 
 
 I'm trying hard not to `eject` from this setup, but the extra flexibility and the interest to remind myself what's under the hood has me really considering otherwise.
 
+The blog portion of this site is somewhat unique in that it is fully functional while living in the confines of the object based storage AWS S3 provides.  Articles are written in Markdown format and stored as a public file.  Details for these files needs to be appended to articles.json in order for it to show up within the rendered website.  Its really quite cool, and doesnt have the extra overhead of server side rendering.
+
+With that said however, I do anticipate a day when server side rendering will be required.  Search functionality has me particularly worried as while I think I'll  be able to seach the JSON file of articles fairly easily, I wont be able to seach a directory of markdown files for a partiicular term.
+
 ### Available Scripts
 
 In the project directory, you can run:

@@ -14,7 +14,9 @@ class ArticlePage extends Component {
 
 	componentWillMount() {
 		fetch("articles/"+this.state.path+".md").then((response) => response.text()).then((text) => {
-			this.setState({ terms: text })
+			var lines = text.split('\n');
+			lines.splice(0,7);
+			this.setState({ terms: lines.join('\n') })
 		})
 	}
 

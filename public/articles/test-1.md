@@ -1,4 +1,12 @@
 ---
+path: '/this-is-a-test'
+date: '2018-01-04'
+title: 'This is a Test'
+author: 'Aaron Todd'
+description: 'Test Markdown!.  Also, this is a test of the config-override'
+---
+
+---
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image

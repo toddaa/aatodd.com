@@ -19,6 +19,7 @@
     "history": "^4.7.2",
     "mdbreact": "^4.8.4",
     "moment": "^2.22.2",
+    "proxyquire": "^2.1.0",
     "react": "^16.6.3",
     "react-avatar": "^3.4.6",
     "react-dom": "^16.6.3",
@@ -27,13 +28,14 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "reactstrap": "^6.5.0",
+    "rewire": "^4.0.1",
     "typeface-roboto": "0.0.54",
     "typescript": "^3.2.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "node scripts/customized-config start",
+    "build": "node scripts/customized-config build",
+    "test": "node scripts/customized-config test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive",
     "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E1ZXZK7SH7CEJ9"

@@ -1,11 +1,11 @@
 # Hey there!
 This is the code for my personal site.  I've spent quite a bit of time learning and playing with React lately, but I've found that there are so many tools out there to eliminate the mundane of setting up the environment.  So I bootstrapped this with [Create React App](https://github.com/facebook/create-react-app) as I do with many projects these days.  I've left the original scripts below in place, but have added more at the end for my needs.
 
-I'm trying hard not to `eject` from this setup, but the extra flexibility and the interest to remind myself what's under the hood has me really considering otherwise.
+I'm trying hard not to `eject` from this setup, but the extra flexibility and the interest to remind myself what's under the hood has me really considering otherwise.  In lieu of that, for now, I've followed this guide [here](https://daveceddia.com/customize-create-react-app-webpack-without-ejecting/) to extend the config without ejecting.  It works surprisingly well.
 
-The blog portion of this site is somewhat unique in that it is fully functional while living in the confines of the object based storage AWS S3 provides.  Articles are written in Markdown format and stored as a public file.  Details for these files needs to be appended to articles.json in order for it to show up within the rendered website.  Its really quite cool, and doesnt have the extra overhead of server side rendering.
+The blog portion of this site is somewhat unique in that it is fully functional while living within the confines of the object based storage AWS S3 provides.  Articles are written in Markdown format and stored as a public file.  Details for these files need to be appended to articles.json in order for it to show up within the rendered website.  It's really quite cool and doesn't have the extra overhead of server-side rendering.  The extension mentioned in the previous paragraph is being used to automate the build of the articles.json file.
 
-With that said however, I do anticipate a day when server side rendering will be required.  Search functionality has me particularly worried as while I think I'll  be able to seach the JSON file of articles fairly easily, I wont be able to seach a directory of markdown files for a partiicular term.
+I do anticipate a day when server-side rendering will be required, however.  Search functionality has me particularly worried as while I think I'll be able to search the JSON file of articles fairly easily, I won't be able to search a directory of markdown files for a particular term.
 
 ### Available Scripts
 

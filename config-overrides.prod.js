@@ -17,7 +17,7 @@ console.log("TEST")
 		fs.readdir(articleFolder, (err, files) => {
 			var filesProcessed = 0;
 			files.forEach(file => {
-				console.log(file);
+				// console.log(file);
 
 				var lineReader = require('readline').createInterface({
 					input: require('fs').createReadStream(articleFolder+file),
@@ -39,7 +39,7 @@ console.log("TEST")
 
 				lineReader.on('close', function() {
 					//console.log(convertLines2JSON(wantedLines))
-					convertLines2JSON(wantedLines);
+					convertLines2JSON(file, wantedLines);
 
 					filesProcessed++;
 					//process.exit(0);
@@ -57,26 +57,28 @@ console.log("TEST")
 })();
 
 let tempArray = [];
-function convertLines2JSON(lines){
+function convertLines2JSON(file, lines){
 	//console.log(lines);
 	let outArray = {};
+	outArray.mdfile = file;
 	lines.forEach(line => {
 		//console.log(line);
 		let lineTemp = line.split(":");
 
-		outArray[lineTemp[0]] = lineTemp[1]
+		outArray[lineTemp[0]] = lineTemp[1].replace("\'","").replace("'","").trim();
+		// console.log(lineTemp[1].replace("\'","").replace("'","").trim())
 	});
 	tempArray.push(outArray);
 	//console.log()
 }
 
 function writeJSON(){
-	console.log(tempArray)
+	//console.log(tempArray)
 	fs.writeFile(outputJSONfile, JSON.stringify(tempArray), function(err) {
 		if(err) {
 			return console.log(err);
 		}
 
-		console.log("The file was saved!");
+		console.log("JSON file was created!");
 	});
 }

@@ -1,5 +1,0 @@
-[
-	{"title": "Test", "path": "/test", "author": "Aaron Todd", "date": "2019-01-04", "description": "This is a description of a test article"},
-	{"title": "Test 1", "path": "/test-1", "author": "Aaron Todd", "date": "2019-01-05", "description": "This is a description of a test 1 article"},
-	{"title": "Test 2", "path": "/test-2", "author": "Aaron Todd", "date": "2019-01-06", "description": "This is a description of a test 2 article"}
-]

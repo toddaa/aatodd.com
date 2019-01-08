@@ -38,7 +38,7 @@
     "test": "node scripts/customized-config test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive",
-    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E1ZXZK7SH7CEJ9"
+    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E38H4ATMQBHZ0F"
   },
   "eslintConfig": {
     "extends": "react-app"

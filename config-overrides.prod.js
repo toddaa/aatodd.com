@@ -62,14 +62,19 @@ function convertLines2JSON(file, lines){
 	let outArray = {};
 	outArray.mdfile = file;
 	lines.forEach(line => {
-		//console.log(line);
+		//console.log(line)
+
 		let lineTemp = line.split(":");
 
-		outArray[lineTemp[0]] = lineTemp[1].replace("\'","").replace("'","").trim();
-		// console.log(lineTemp[1].replace("\'","").replace("'","").trim())
+		let key = lineTemp[0];
+		let value = lineTemp[1].replace("\'","").replace("'","").trim();
+
+		outArray[key] = value;
 	});
-	tempArray.push(outArray);
-	//console.log()
+	//console.log(outArray.date)
+	if (outArray.date !== ''){
+		tempArray.push(outArray);
+	}
 }
 
 function writeJSON(){
@@ -79,6 +84,6 @@ function writeJSON(){
 			return console.log(err);
 		}
 
-		console.log("JSON file was created!");
+		console.log("The file was saved!");
 	});
 }

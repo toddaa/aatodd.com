@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink, Link  } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitterSquare, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Avatar from 'react-avatar';
 import './sidebar.css';
 import Environment from '../environment';
-
-const iconLinkedin = (
-	<FontAwesomeIcon icon={faLinkedin} className="fa-fw fa-lg" />
-);
-
-const iconGithub = (
-	<FontAwesomeIcon icon={faGithub} className="fa-fw fa-lg" />
-);
-
-const iconTwitter = (
-	<FontAwesomeIcon icon={faTwitterSquare} className="fa-fw fa-lg" />
-);
+import Social from '../social';
 
 function SideBarNavButton(props) {
 	const isAllowed = props.isAllowed;
@@ -46,11 +33,7 @@ class Sidebar extends Component {
 					<ul className="list-unstyled components">
 						{navContent}
 					</ul>
-					<div className="social">
-						<a href="http://twitter.com/toddaa">{iconTwitter}</a>
-						<a href="http://github.com/toddaa">{iconGithub}</a>
-						<a href="http://linkedin.com/in/toddaa">{iconLinkedin}</a>
-					</div>
+					<Social/>
 					<Environment />
 				</nav>
 		)

@@ -1,22 +1,9 @@
 import React, { Component } from 'react';
 import { NavLink, Link  } from 'react-router-dom';
 import classnames from 'classnames';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTwitterSquare, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Avatar from 'react-avatar';
+import Social from '../social';
 import './topbar.css';
-
-const iconLinkedin = (
-	<FontAwesomeIcon icon={faLinkedin} className="fa-fw fa-lg" />
-);
-
-const iconGithub = (
-	<FontAwesomeIcon icon={faGithub} className="fa-fw fa-lg" />
-);
-
-const iconTwitter = (
-	<FontAwesomeIcon icon={faTwitterSquare} className="fa-fw fa-lg" />
-);
 
 function TopBarNavButton(props) {
 	const isAllowed = props.isAllowed;
@@ -43,11 +30,7 @@ class Topbar extends Component {
 						<ul className="navbar-nav mr-auto">
 							{navContent}
 						</ul>
-						<div className="social">
-							<a href="http://twitter.com/toddaa">{iconTwitter}</a>
-							<a href="http://github.com/toddaa">{iconGithub}</a>
-							<a href="http://linkedin.com/in/toddaa">{iconLinkedin}</a>
-						</div>
+						<Social/>
 					</div>
 				</nav>
 		)

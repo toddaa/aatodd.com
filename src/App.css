@@ -23,3 +23,13 @@ body,html,{
 		margin-top:60px;
 	}
 }
+#nprogress .bar {
+	background: #ff6700a6 !important;
+}
+#nprogress .peg {
+	box-shadow: 0 0 10px #ff6700a6, 0 0 5px #ff6700a6 !important;
+}
+#nprogress .spinner-icon {
+	border-top-color: #ff6700a6 !important;
+	border-left-color: #ff6700a6 !important;
+}

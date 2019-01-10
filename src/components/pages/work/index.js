@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import {Helmet} from "react-helmet";
 import './work.css';
 import Environment from '../../environment';
 
 class AboutPage extends Component {
+	componentWillMount () {
+	  nprogress.start()
+	}
+
+	componentDidMount () {
+	  nprogress.done()
+	}
 	render() {
 		window.scrollTo(0, 0);
 		return (

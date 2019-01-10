@@ -1,9 +1,18 @@
 import React, { Component } from 'react';
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import {Helmet} from "react-helmet";
 import './root_page.css';
 import Environment from '../../environment';
 
 class RootPage extends Component {
+	componentWillMount () {
+	  nprogress.start()
+	}
+
+	componentDidMount () {
+	  nprogress.done()
+	}
 	render() {
 		window.scrollTo(0, 0);
 		return (

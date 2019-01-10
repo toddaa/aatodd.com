@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import {Helmet} from "react-helmet";
 import ReactMarkdown from 'react-markdown';
 import './article.css';
@@ -14,10 +16,12 @@ class ArticlePage extends Component {
 	}
 
 	componentWillMount() {
+		nprogress.start()
 		fetch("articles/"+this.state.path).then((response) => response.text()).then((text) => {
 			var lines = text.split('\n');
 			lines.splice(0,7);
 			this.setState({ terms: lines.join('\n') })
+			nprogress.done()
 		})
 	}
 

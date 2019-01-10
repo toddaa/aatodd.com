@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
 import {Helmet} from "react-helmet";
 import { Link  } from 'react-router-dom';
 import './blog.css';
@@ -26,6 +28,13 @@ function Articles(props) {
 }
 
 class BlogPage extends Component {
+	componentWillMount () {
+	  nprogress.start()
+	}
+
+	componentDidMount () {
+	  nprogress.done()
+	}
 	render() {
 		window.scrollTo(0, 0);
 		return (

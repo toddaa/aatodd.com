@@ -5,10 +5,7 @@ import { faExclamationTriangle, faSplotch } from '@fortawesome/free-solid-svg-ic
 import './404.css';
 
 const iconError = (
-	<span className="fa-layers fa-fw fa-6x">
-			<FontAwesomeIcon icon={faSplotch}  />
-			<FontAwesomeIcon icon={faExclamationTriangle} className="fa-inverse"  style={{width:".5em", left:'-25px'}} />
-	</span>
+	<FontAwesomeIcon icon={faExclamationTriangle} className="fa-fw fa-4x" />
 );
 
 class ErrorPage extends Component {

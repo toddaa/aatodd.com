@@ -8,16 +8,16 @@
     "@fortawesome/free-regular-svg-icons": "^5.6.3",
     "@fortawesome/free-solid-svg-icons": "^5.6.3",
     "@fortawesome/react-fontawesome": "^0.1.3",
-    "@material-ui/core": "^3.8.1",
-    "@material-ui/icons": "^3.0.1",
-    "@types/jest": "^23.3.11",
+    "@material-ui/core": "^3.8.3",
+    "@material-ui/icons": "^3.0.2",
+    "@types/jest": "^23.3.12",
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "bootstrap": "^4.1.3",
     "deploy-aws-s3-cloudfront": "^0.2.10",
     "history": "^4.7.2",
-    "mdbreact": "^4.8.4",
+    "mdbreact": "^4.8.7",
     "moment": "^2.22.2",
     "proxyquire": "^2.1.0",
     "react": "^16.6.3",
@@ -38,7 +38,8 @@
     "test": "node scripts/customized-config test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive",
-    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E38H4ATMQBHZ0F"
+    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E38H4ATMQBHZ0F",
+    "clean": "rm -Rf build"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,4 +1,12 @@
 ---
+path: '/original-test'
+date: '2018-01-06'
+title: 'Original Test'
+author: 'Aaron Todd'
+description: 'This file tests markdown'
+---
+
+---
 __Advertisement :)__
 
 - __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image

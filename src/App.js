@@ -56,12 +56,32 @@ function PageRoutes(props) {
 }
 
 class App extends Component {
+	state = {
+		mobile_menu_open: false
+	};
+
+	hamburgerButtonClickHandler = () => {
+		this.setState((prevState) => {
+			return {mobile_menu_open: !prevState.mobile_menu_open};
+		  });
+	}
+
+	bodyClickHandler = () => {
+		if (document.activeElement.tagName === "BODY"){
+			this.forceHideMenu();
+		}
+	}
+
+	forceHideMenu = () => {
+		this.setState({mobile_menu_open: false});
+	}
+
 	render() {
 		return (
 			<Router>
 				<div>
-					<Topbar content={pages} />
-					<div className="wrapper">
+					<Topbar content={pages} menu_state={this.state.mobile_menu_open}  miscClick={this.forceHideMenu} hamburgerClick={this.hamburgerButtonClickHandler} />
+					<div className="wrapper" onClick={this.bodyClickHandler}>
 						<Sidebar content={pages} />
 						<PageRoutes pages={pages} articles={articles}/>
 					</div>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import ReactMarkdown from 'react-markdown';
 import './article.css';
 import Environment from '../../environment';
@@ -24,6 +25,9 @@ class ArticlePage extends Component {
 		window.scrollTo(0, 0);
 		return (
 			<div className="container-fluid h-100 content article">
+				<Helmet>
+					<title>{this.props.article.title}</title>
+				</Helmet>
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">
 						<div className="article">

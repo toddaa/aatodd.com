@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import './404.css';
@@ -21,6 +22,9 @@ class ErrorPage extends Component {
 		window.scrollTo(0, 0);
 		return (
 			<div className="container-fluid h-100 content">
+				<Helmet>
+					<title>404 - Page Not Found</title>
+				</Helmet>
 				<div className="row h-100">
 					<div className="col text-center vertical-center">
 						<h1>{iconError}</h1>

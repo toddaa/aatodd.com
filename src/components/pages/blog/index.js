@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import { Link  } from 'react-router-dom';
 import './blog.css';
 import Environment from '../../environment';
@@ -29,6 +30,9 @@ class BlogPage extends Component {
 		window.scrollTo(0, 0);
 		return (
 			<div className="container-fluid h-100 content blog">
+				<Helmet>
+					<title>Aaron's Blog</title>
+				</Helmet>
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">
 						<h1>Blog</h1>

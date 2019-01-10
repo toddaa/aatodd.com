@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from "react-helmet";
 import './root_page.css';
 import Environment from '../../environment';
 
@@ -7,6 +8,9 @@ class RootPage extends Component {
 		window.scrollTo(0, 0);
 		return (
 				<div className="container-fluid h-100 content root">
+					<Helmet>
+						<title>Aaron Todd | Full Stack Developer and UX addict.</title>
+					</Helmet>
 					<div className="row h-100">
 						<div className="col-12 col-md-9 offset-md-1">
 							<h1>Hello World!</h1>

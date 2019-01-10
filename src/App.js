@@ -67,7 +67,7 @@ class App extends Component {
 	}
 
 	bodyClickHandler = () => {
-		if (document.activeElement.tagName === "BODY"){
+		if (document.activeElement.tagName === "BODY" && window.innerWidth <= 768){
 			this.forceHideMenu();
 		}
 	}

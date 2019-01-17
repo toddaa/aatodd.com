@@ -44,6 +44,7 @@ console.log("TEST")
 					filesProcessed++;
 					//process.exit(0);
 					if(filesProcessed === files.length) {
+						tempArray.sort(arrange);
 						writeJSON();
 					}
 				});
@@ -86,4 +87,8 @@ function writeJSON(){
 
 		console.log("The file was saved!");
 	});
+}
+
+function arrange(a,b) {
+	return new Date(b.date) - new Date(a.date);
 }

@@ -6,6 +6,7 @@ import ReactMarkdown from 'react-markdown';
 import './article.css';
 import Environment from '../../environment';
 
+
 class ArticlePage extends Component {
 	constructor(props) {
 		super(props);
@@ -35,6 +36,8 @@ class ArticlePage extends Component {
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">
 						<div className="article">
+							<h1>{this.props.article.title}</h1>
+							<h6 className="author">Posted on {this.props.article.date} by {this.props.article.author}</h6>
 							<ReactMarkdown source={this.state.terms} />
 						</div>
 					</div>

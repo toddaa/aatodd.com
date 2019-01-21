@@ -20,17 +20,13 @@ div.blog section.article p{
 	font-size:1em;
 }
 
-div.blog section.article h5.title{
+div.blog section.article h3.title{
 	font-weight:500;
 }
 
 div.blog section.article p.date{
 	font-size:.8em;
 	font-weight:400;
-}
-
-div.blog section.article p.desc{
-
 }
 
 div.blog section.article p.more{

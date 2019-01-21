@@ -12,8 +12,8 @@ class Articles extends Component {
 			return (
 				<section key={i} className="article">
 					<Link to={article.path}>
-						<h5 className="title">{article.title}</h5>
-						<p className="date">{article.date} by {article.author}</p>
+						<h3 className="title">{article.title}</h3>
+						<p className="date">{article.date}</p>
 						<p className="desc">{article.description}</p>
 						<p className="more">More...</p>
 					</Link>

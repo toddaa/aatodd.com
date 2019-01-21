@@ -7,7 +7,6 @@ import Environment from '../environment';
 import Social from '../social';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGalacticRepublic } from '@fortawesome/free-brands-svg-icons';
-import { withRouter } from 'react-router'
 
 const iconSW = (
 	<FontAwesomeIcon icon={faGalacticRepublic} className="fa-6x" />
@@ -27,26 +26,9 @@ class Sidebar extends Component {
 		hover_state: false
 	};
 
-	//  constructor(props) {
-	//  	super(props);
-	// // 	//console.log(props)
-    // 	this.flip = this.flip.bind(this);
-	// }
-	componentDidUpdate () {
-		// let { location: { pathname } } = this.props
-
-		// if (prevProps.location.pathname === pathname) return
-		//this.routeChanged()
-		//this.setState({hover_state: false});
-		//this.flip()
-	}
-
 	flip = () => {
-		/*this.setState((prevState) => {
-			return {hover_state: !prevState.hover_state};
-		});*/
 		this.setState({hover_state: true});
-		setTimeout(function(){ this.setState({hover_state: false}); }.bind(this), 1000);
+		setTimeout(function(){ this.setState({hover_state: false}); }.bind(this), 700);
 	}
 	render() {
 		const navContent = this.props.content.map((page, i) =>

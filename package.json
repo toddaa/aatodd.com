@@ -42,7 +42,7 @@
     "test": "node scripts/customized-config test --env=jsdom",
     "eject": "react-scripts eject",
     "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive --delete --profile toddaa",
-    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --distribution=E38H4ATMQBHZ0F",
+    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --delete --profile toddaa --distribution=E38H4ATMQBHZ0F",
     "clean": "rm -Rf build"
   },
   "eslintConfig": {

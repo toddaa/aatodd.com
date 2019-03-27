@@ -20,6 +20,7 @@
     "mdbreact": "^4.10.0",
     "moment": "^2.24.0",
     "nprogress": "^0.2.0",
+    "prismjs": "^1.16.0",
     "proxyquire": "^2.1.0",
     "react": "^16.8.2",
     "react-avatar": "^3.4.6",
@@ -30,19 +31,20 @@
     "react-markdown": "^4.0.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "^2.1.5",
+    "react-syntax-highlighter": "^10.2.1",
     "reactstrap": "^7.1.0",
     "rewire": "^4.0.1",
     "typeface-roboto": "0.0.54",
     "typescript": "^3.3.3"
   },
   "scripts": {
-	"start_old": "react-scripts start",
-	"start": "node scripts/customized-config start",
+    "start_old": "react-scripts start",
+    "start": "node scripts/customized-config start",
     "build": "node scripts/customized-config build",
     "test": "node scripts/customized-config test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive --delete --profile toddaa",
-    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --delete --profile toddaa --distribution=E38H4ATMQBHZ0F",
+    "deploy-dev": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=dev.aatodd.com --non-interactive --delete",
+    "deploy-prod": "npm run build && deploy-aws-s3-cloudfront --source=./build/ --bucket=aatodd.com --non-interactive --delete --distribution=E38H4ATMQBHZ0F",
     "clean": "rm -Rf build"
   },
   "eslintConfig": {

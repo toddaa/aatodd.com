@@ -1,13 +1,18 @@
-.article img{
+.article img {
 	max-width: 100%;
 	height: auto;
 }
-.article .author{
-	font-size:.8em;
-	font-weight:300;
+
+.article .author {
+	font-size: .8em;
+	font-weight: 300;
 	color: #a1a1a1;
 }
 
 .article {
-	margin-bottom:4em;
+	margin-bottom: 4em;
+}
+
+.article pre {
+	font-size: .6em;
 }

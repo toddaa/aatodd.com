@@ -44,7 +44,7 @@ class Sidebar extends Component {
 										<Avatar src="A736416D-1265-43E8-BD43-EA3061A13A79.JPG" name="Aaron Todd" round={true} size={100} style={{margin:'1em'}} />
 									</div>
 									<div className="back">
-										<div style={{display: "inline-block", verticalAlign: "middle", width: "100px", height: "100px", borderRadius: "100%", fontFamily: "Helvetica, Arial, sans-serif", margin: "1em"}}>
+										<div>
 											{iconSW}
 										</div>
 									</div>

@@ -13,7 +13,7 @@
 #sidebar .sidebar-header {
 	padding: 10px 5px;
 	text-align: center;
-	margin:0 auto;
+	margin: 0 auto;
 
 }
 
@@ -22,12 +22,14 @@
 	font-size: 1.1em;
 	display: block;
 }
+
 #sidebar ul li a:hover {
 	color: #000000;
 	background: rgb(209, 209, 209);
 	border-right: #ff6700a6 .3em solid;
 	border-left: rgb(209, 209, 209) .3em solid;
 }
+
 #sidebar a,
 #sidebar a:hover,
 #sidebar a:focus {
@@ -36,17 +38,18 @@
 	transition: all 0.3s;
 	text-align: center;
 }
-#sidebar a.active{
+
+#sidebar a.active {
 	background: #a7a7a7;
-	color:#000000;
+	color: #000000;
 	font-weight: bold;
 	border-right: #ff6700a6 .3em solid;
 	border-left: #a7a7a7 .3em solid;
 }
 
-#sidebar div.social{
-	text-align:center;
-	padding:1em;
+#sidebar div.social {
+	text-align: center;
+	padding: 1em;
 }
 
 /*#sidebar div.sb-avatar{
@@ -75,7 +78,9 @@
 	transform: rotateY(180deg);
 }
 
-.flip-container, .front, .back {
+.flip-container,
+.front,
+.back {
 	width: 130px;
 	height: 130px;
 }
@@ -89,7 +94,8 @@
 }
 
 /* hide back of pane during swap */
-.front, .back {
+.front,
+.back {
 	backface-visibility: hidden;
 
 	position: absolute;
@@ -107,4 +113,14 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+.back div {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	margin: 1em;
+	color: #5b5b5b;
 }

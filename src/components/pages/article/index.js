@@ -38,7 +38,8 @@ class ArticlePage extends Component {
 					<div className="col-12 col-md-9 offset-md-1">
 						<div className="article">
 							<h1>{this.props.article.title}</h1>
-							<h6 className="author">Posted on {this.props.article.date} by {this.props.article.author}</h6>
+							<h6 className="date">{this.props.article.date}</h6>
+							<h6 className="author">Written by {this.props.article.author}</h6>
 							<ReactMarkdown source={this.state.terms} renderers={{ code: CodeBlock }} />
 						</div>
 					</div>

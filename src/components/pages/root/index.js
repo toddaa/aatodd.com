@@ -25,8 +25,8 @@ class RootPage extends Component {
 							<h1>Hello World!  I'm Aaron.</h1>
 							<h4>Welcome to the site.</h4>
 							<p>
-								I've got lots to offer here, and plan to have plenty more in the future.
-								Sharing my thoughts publicly is a fairly new endeavor, and it is my hope that you will find something useful here.
+								I'm a software developer and plan to share my experiences here.
+								Sharing my thoughts publicly is a fairly new endeavor, and it is my hope that you will find something useful.
 								So please, allow me to stir the pot...
 							</p>
 							<p>

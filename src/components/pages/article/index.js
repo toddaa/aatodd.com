@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import nprogress from 'nprogress'
 import 'nprogress/nprogress.css'
-import {Helmet} from "react-helmet";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from "./CodeBlock";
 import ImageBlock from "./ImageBlock";
 import './article.css';
 import Environment from '../../environment';
+import MetaTags from 'react-meta-tags';
 
 
 class ArticlePage extends Component {
@@ -32,9 +32,13 @@ class ArticlePage extends Component {
 		window.scrollTo(0, 0);
 		return (
 			<div className="container-fluid h-100 content article">
-				<Helmet>
+				<MetaTags>
 					<title>{this.props.article.title}</title>
-				</Helmet>
+					<meta id="description-meta-tag" name="description" content={this.props.article.description} />
+					<meta id="og-title-meta-tags" property="og:title" content={this.props.article.title} />
+					<meta id="og-description-meta-tags" property="og:description" content={this.props.article.description} />
+					<meta id="og-url-meta-tags" property="og:url" content={"https://" + process.env.REACT_APP_BASE_DOMAIN + this.props.article.path} />
+				</MetaTags>
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">
 						<div className="article">

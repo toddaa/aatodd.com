@@ -4,6 +4,7 @@ import 'nprogress/nprogress.css'
 import {Helmet} from "react-helmet";
 import ReactMarkdown from 'react-markdown';
 import CodeBlock from "./CodeBlock";
+import ImageBlock from "./ImageBlock";
 import './article.css';
 import Environment from '../../environment';
 
@@ -40,7 +41,7 @@ class ArticlePage extends Component {
 							<h1>{this.props.article.title}</h1>
 							<h6 className="date">{this.props.article.date}</h6>
 							<h6 className="author">Written by {this.props.article.author}</h6>
-							<ReactMarkdown source={this.state.terms} renderers={{ code: CodeBlock }} />
+							<ReactMarkdown source={this.state.terms} renderers={{ code: CodeBlock, image: ImageBlock }} />
 						</div>
 					</div>
 				</div>

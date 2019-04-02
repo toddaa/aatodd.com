@@ -6,13 +6,15 @@ author: 'Aaron Todd'
 description: 'So I’ve been working a lot with AWS lately.  Specifically, I’ve been setting up microservices that encompass several AWS offerings for a single purpose.'
 ---
 
+![Cloud Idea](../images/analysis-blackboard-board-355952.jpg)
+
 I’ve been working a lot with [AWS](https://aws.amazon.com/) lately.  Specifically, I’ve been setting up serverless microservices using AWS Lambda along with several other offerings within the AWS ecosystem. To do this I’ve been leveraging [CloudFormation](https://aws.amazon.com/cloudformation/) and the [Serverless Framework](https://serverless.com/).
 
 I won't bore you with all the details as there are other valuable resources to explain things. Once I got my application working the way I wanted to I stumbled on [this](https://serverless.com/blog/building-mutliple-runtimes) article by [Jeremy Coffield](https://twitter.com/functorgrease).  If you don't need to consider non-natively supported runtimes then it’s a great read.
 
 In my case, I’m working with Nodejs and PHP. Now before you choke on this please understand that much of my day-to-day is spend modernizing existing code which an investment has already been made. As much as I would like to spend the time rewriting things in cutting edge languages I really have to consider the cost of doing so. In some cases, it simply doesn't make sense to do an extensive rewrite.
 
-Moving on, I'm going to assume that you already have the business logic of your Nodejs and PHP code ready to go.  My repo on GitHub will include some basic samples though if you need them. The rest of this will focus primarily on Serverless and deploying to AWS. To get going you’ll need to create a serverless.yml file in the root of your project. Inside we'll specify the service name, provider, and some settings to help Serverless know where we're deploying to:
+Moving on, I'm going to assume that you already have the business logic of your Nodejs and PHP code ready to go.  The [project files](https://github.com/toddaa/aws-multiple-runtime-microservice) on GitHub will include some basic samples though if you need them. The rest of this will focus primarily on Serverless and deploying to AWS. To get going you’ll need to create a serverless.yml file in the root of your project. Inside we'll specify the service name, provider, and some settings to help Serverless know where we're deploying to:
 ```
 service: test-service
 provider:
@@ -142,4 +144,4 @@ The same goes for the PHP function:
 
 Now both functions will be deployed with only what they need to run, and your entire microservice application is still all contained in a single development repo.
 
-To give this a try for yourself clone the project files and run `serverless deploy`.
+To give this a try for yourself clone the [project files](https://github.com/toddaa/aws-multiple-runtime-microservice) and run `serverless deploy`.

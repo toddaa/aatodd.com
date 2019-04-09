@@ -2,11 +2,11 @@ module.exports = {
   siteMetadata: {
     title: `Aaron Todd`,
     description: `This is my site.  Enjoy!`,
-	author: `Aaron Todd`,
-	siteUrl: `https://aatodd.com`
+	  author: `Aaron Todd`,
+	  siteUrl: `https://aatodd.com`
   },
   plugins: [
-	`gatsby-plugin-catch-links`,
+	  `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -26,12 +26,11 @@ module.exports = {
         background_color: `#ff6700a6`,
         theme_color: `#ff6700a6`,
         display: `standalone`,
-		icon: `src/images/A736416D-1265-43E8-BD43-EA3061A13A79.jpg`, // This path is relative to the root of the site.
-		include_favicon: true,
+		    icon: `src/images/A736416D-1265-43E8-BD43-EA3061A13A79.jpg`, // This path is relative to the root of the site.
       },
 	},
 	`gatsby-transformer-remark`,
-    'gatsby-plugin-offline',
+  'gatsby-plugin-offline',
 	{
 		resolve: `gatsby-source-filesystem`,
 		options: {

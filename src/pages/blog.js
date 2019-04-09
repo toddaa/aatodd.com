@@ -22,7 +22,7 @@ const BlogPage = (props) => {
 		<Link to={node.fields.slug} >
 			<div className="post-list">
 				<h3 className="article_title">{node.frontmatter.title}</h3>
-				<span>{node.date}</span>
+				<p className="article_date">{node.frontmatter.date}</p>
 				<p className="article_desc">{node.excerpt}</p>
 				<p className="more">More...</p>
 			</div>

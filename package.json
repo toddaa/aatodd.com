@@ -50,8 +50,8 @@
 		"start": "npm run develop",
 		"serve": "gatsby serve",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-		"deploy-dev": "gatsby build && deploy-aws-s3-cloudfront --source=./public/ --bucket=dev.aatodd.com --non-interactive --delete --profile=toddaa",
-		"deploy-prod": "gatsby build && deploy-aws-s3-cloudfront --source=./public/ --bucket=aatodd.com --non-interactive --delete --distribution=E38H4ATMQBHZ0F",
+		"deploy-dev": "gatsby build && deploy-aws-s3-cloudfront --source=./public/ --bucket=dev.aatodd.com --non-interactive --delete",
+		"deploy-prod": "deploy-aws-s3-cloudfront --source=./public/ --bucket=aatodd.com --non-interactive --delete --distribution=E38H4ATMQBHZ0F",
 		"clean": "rm -Rf public"
 	},
 	"repository": {

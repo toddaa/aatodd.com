@@ -7,7 +7,7 @@ const Image = () => (
 	<StaticQuery
 		query={graphql`
 			query {
-				placeholderImage: file(relativePath: { eq: "A736416D-1265-43E8-BD43-EA3061A13A79.JPG" }) {
+				placeholderImage: file(relativePath: { eq: "A736416D-1265-43E8-BD43-EA3061A13A79.png" }) {
 					childImageSharp {
 						fixed(width: 40, height: 40) {
 							...GatsbyImageSharpFixed_tracedSVG

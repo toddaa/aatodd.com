@@ -20,13 +20,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aaron Todd`,
-        short_name: `Aaron Todd`,
+        name: `Aaron-Todd`,
+        short_name: `AaronTodd`,
         start_url: `/`,
-        background_color: `#ff6700a6`,
-        theme_color: `#ff6700a6`,
-        display: `standalone`,
-		    icon: `src/images/A736416D-1265-43E8-BD43-EA3061A13A79.jpg`, // This path is relative to the root of the site.
+        background_color: `#ff6700`,
+        theme_color: `#ff6700`,
+        display: `minimal-ui`,
+		    icon: `src/images/A736416D-1265-43E8-BD43-EA3061A13A79.png` // This path is relative to the root of the site.
       },
 	},
 	`gatsby-transformer-remark`,

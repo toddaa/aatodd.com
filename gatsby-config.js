@@ -20,12 +20,12 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Aaron-Todd`,
-        short_name: `AaronTodd`,
+        name: `Aaron Todd`,
+        short_name: `Aaron Todd`,
         start_url: `/`,
-        background_color: `#ff6700`,
-        theme_color: `#ff6700`,
-        display: `minimal-ui`,
+        background_color: `#ff6700a6`,
+        theme_color: `#ff6700a6`,
+        display: `standalone`,
 		    icon: `src/images/A736416D-1265-43E8-BD43-EA3061A13A79.png` // This path is relative to the root of the site.
       },
 	},

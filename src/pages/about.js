@@ -22,7 +22,7 @@ const AboutPage = () => (
 							I've even ported and customized open source software to architectures they weren’t initially intended for.
 							No need to reinvent the wheel if you can just adapt it right?
 							I've also spent a lot of time focusing on the front end and more importantly the user’s experience in regards to the application.
-							I like to create applications that people want to use.
+							I love creating applications that people want to use!
 						</p>
 						<p>
 							These days I've been focusing a little more on serverless technologies and running code on a cloud platform.

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "gatsby"
-import './sidebar.css';
 import Environment from './environment';
 import Social from './social';
 import AaronFace from "./imgAaron"

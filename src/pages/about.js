@@ -1,14 +1,10 @@
 import React from 'react';
-// import nprogress from 'nprogress'
-// import 'nprogress/nprogress.css'
-// import {Helmet} from "react-helmet";
-// import './about.css';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const AboutPage = () => (
 	<Layout>
-	  <SEO title="About Aaron" keywords={[`gatsby`, `application`, `react`]} />
+		<SEO title="About Aaron" keywords={[`gatsby`, `application`, `react`]} />
 			<div className="container-fluid h-100 content about">
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">

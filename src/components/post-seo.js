@@ -43,6 +43,7 @@ function PostSEO(props) {
 				},
 				{ name: 'twitter:card', content: 'summary_large_image' },
 				{ name: 'twitter:title', content: props.title },
+				{ name: 'twitter:site', content: '@toddaa' },
 				{
 					name: 'twitter:description',
 					content: props.description,

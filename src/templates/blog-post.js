@@ -14,12 +14,12 @@ function BlogPost(props) {
 	const { date } = post.frontmatter;
 	const { author } = post.frontmatter;
 	const url = props.data.site.siteMetadata.siteUrl
-	// console.log(post.frontmatter)
+	console.log(post.frontmatter)
 	const thumbnail = (post.frontmatter.image != null ? post.frontmatter.image.childImageSharp.fluid.src : '')
 
 	let img = '';
 	if (thumbnail){
-		img = <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+		img = <Img fluid={post.frontmatter.image.childImageSharp.fluid} style={{maxWidth:'50%', margin:'0 auto'}} />
 	}
 
 	return (
@@ -34,11 +34,13 @@ function BlogPost(props) {
 			<div className="container-fluid h-100 content post">
 				<div className="row h-100">
 					<div className="col-12 col-md-9 offset-md-1">
-					<h1>{title}</h1>
-					<h6 className="date">{date}</h6>
-					<h6 className="author">Written by {author}</h6>
-					{img}
-					<div dangerouslySetInnerHTML={{ __html: post.html }} />
+						<h1>{title}</h1>
+						<h6 className="date">{date}</h6>
+						<h6 className="author">Written by {author}</h6>
+						<div className="text-center">
+						{img}
+						</div>
+					<div dangerouslySetInnerHTML={{ __html: post.html }} style={{marginTop:'15px'}} />
 					</div>
 				</div>
 			</div>
@@ -59,11 +61,9 @@ query PostQuery($slug: String!) {
 			author
 			image {
 				childImageSharp {
-					resize(width: 1500, height: 1500) {
-						src
-					}
-					fluid(maxWidth: 786) {
+					fluid(maxWidth: 786, quality: 100) {
 						...GatsbyImageSharpFluid
+						presentationWidth
 					}
 				}
 			}

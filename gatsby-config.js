@@ -36,7 +36,7 @@ module.exports = {
 			options: {
 				path: `${__dirname}/src/pages`,
 				name: "routable",
-				ignore: [`**/404.js`, `**/index.js`, `**/*.md`, `**/*.jpg`]
+				ignore: [`**/404.js`, `**/index.js`, `**/*.md`, `**/*.jpg`, `**/*.png`]
 			},
 		},
 		{

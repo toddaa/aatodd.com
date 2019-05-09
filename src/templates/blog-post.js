@@ -14,7 +14,7 @@ function BlogPost(props) {
 	const { date } = post.frontmatter;
 	const { author } = post.frontmatter;
 	const url = props.data.site.siteMetadata.siteUrl
-	console.log(post.frontmatter)
+	// console.log(post.frontmatter)
 	const thumbnail = (post.frontmatter.image != null ? post.frontmatter.image.childImageSharp.fluid.src : '')
 
 	let img = '';

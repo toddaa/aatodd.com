@@ -53,6 +53,12 @@ module.exports = {
 					`gatsby-remark-prismjs`,
 				]
 			}
+		},
+		{
+			resolve: `gatsby-plugin-google-analytics`,
+			options: {
+				trackingId: "UA-131576285-1",
+			},
 		}
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline

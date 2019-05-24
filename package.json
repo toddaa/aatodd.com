@@ -1,60 +1,62 @@
 {
-	"name": "aatodd.com",
-	"private": true,
-	"description": "aatodd.com Gatsby version",
-	"version": "0.2.0",
-	"author": "Aaron Todd <toddaa@gmail.com>",
-	"dependencies": {
-		"@fortawesome/fontawesome-svg-core": "^1.2.15",
-		"@fortawesome/free-brands-svg-icons": "^5.7.2",
-		"@fortawesome/free-regular-svg-icons": "^5.7.2",
-		"@fortawesome/free-solid-svg-icons": "^5.7.2",
-		"@fortawesome/react-fontawesome": "^0.1.4",
-		"classnames": "^2.2.6",
-		"deploy-aws-s3-cloudfront": "^1.0.0",
-		"gatsby": "^2.3.16",
-		"gatsby-image": "^2.0.37",
-		"gatsby-plugin-catch-links": "^2.0.13",
-		"gatsby-plugin-manifest": "^2.0.28",
-		"gatsby-plugin-offline": "^2.0.25",
-		"gatsby-plugin-react-helmet": "^3.0.12",
-		"gatsby-plugin-sharp": "^2.0.33",
-		"gatsby-remark-prismjs": "^3.2.8",
-		"gatsby-source-filesystem": "^2.0.29",
-		"gatsby-transformer-remark": "^2.3.8",
-		"gatsby-transformer-sharp": "^2.1.17",
-		"mdbreact": "^4.12.0",
-		"moment": "^2.24.0",
-		"prismjs": "^1.16.0",
-		"prop-types": "^15.7.2",
-		"react": "^16.8.6",
-		"react-avatar": "^3.6.0",
-		"react-dom": "^16.8.6",
-		"react-hamburger-button": "0.0.1",
-		"react-helmet": "^5.2.0",
-		"react-router-dom": "^5.0.0",
-		"styled-components": "^4.2.0",
-		"typeface-roboto": "0.0.54"
-	},
-	"devDependencies": {
-		"prettier": "^1.16.4"
-	},
-	"keywords": [
-		"gatsby"
-	],
-	"license": "MIT",
-	"scripts": {
-		"build": "gatsby build",
-		"develop": "gatsby develop",
-		"format": "prettier --write src/**/*.{js,jsx}",
-		"start": "npm run develop",
-		"serve": "gatsby serve",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-		"deploy-dev": "deploy-aws-s3-cloudfront --source=./public/ --bucket=dev.aatodd.com --non-interactive --delete --profile toddaa",
-		"deploy-prod": "deploy-aws-s3-cloudfront --source=./public/ --bucket=aatodd.com --non-interactive --delete --distribution=E38H4ATMQBHZ0F --profile toddaa"
-	},
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/gatsbyjs/gatsby-starter-default"
-	}
+  "name": "aatodd.com",
+  "private": true,
+  "description": "aatodd.com Gatsby version",
+  "version": "0.2.0",
+  "author": "Aaron Todd <toddaa@gmail.com>",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-regular-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "classnames": "^2.2.6",
+    "deploy-aws-s3-cloudfront": "^1.0.0",
+    "gatsby": "^2.3.16",
+    "gatsby-image": "^2.0.37",
+    "gatsby-plugin-catch-links": "^2.0.13",
+    "gatsby-plugin-google-analytics": "^2.0.20",
+    "gatsby-plugin-manifest": "^2.0.28",
+    "gatsby-plugin-offline": "^2.0.25",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.33",
+    "gatsby-remark-prismjs": "^3.2.8",
+    "gatsby-source-filesystem": "^2.0.29",
+    "gatsby-transformer-remark": "^2.3.8",
+    "gatsby-transformer-sharp": "^2.1.17",
+    "mdbreact": "^4.12.0",
+    "moment": "^2.24.0",
+    "prismjs": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-avatar": "^3.6.0",
+    "react-dev-utils": "^9.0.1",
+    "react-dom": "^16.8.6",
+    "react-hamburger-button": "0.0.1",
+    "react-helmet": "^5.2.0",
+    "react-router-dom": "^5.0.0",
+    "styled-components": "^4.2.0",
+    "typeface-roboto": "0.0.54"
+  },
+  "devDependencies": {
+    "prettier": "^1.16.4"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx}",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy-dev": "deploy-aws-s3-cloudfront --source=./public/ --bucket=dev.aatodd.com --non-interactive --delete --profile toddaa",
+    "deploy-prod": "deploy-aws-s3-cloudfront --source=./public/ --bucket=aatodd.com --non-interactive --delete --distribution=E38H4ATMQBHZ0F --profile toddaa"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
 }

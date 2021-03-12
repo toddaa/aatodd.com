@@ -30,7 +30,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-avatar": "^3.6.0",
-    "react-dev-utils": "^9.0.1",
+    "react-dev-utils": "^11.0.4",
     "react-dom": "^16.8.6",
     "react-hamburger-button": "0.0.1",
     "react-helmet": "^5.2.0",

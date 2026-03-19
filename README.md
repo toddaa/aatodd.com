@@ -1,28 +1,36 @@
-# Hey there!
-This is the code for my personal site.  After spending the time learning and playing with React based on [Create React App](https://github.com/facebook/create-react-app) I've realized that while its definetly a great start, it does have some pitfalls.  Specificaly in the SEO realm.  It was definetly a great way to learn some new things with React and how things were implemented with that being the starting point.
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Moving forward, since part of my application includes a blog I'll be switching to the [Gatsby](https://www.gatsbyjs.org/) framework which is based on React.  I've taken many of my existing components an made them work under the Gatsby umbrella, which is differnt but still Javascript.
+## Getting Started
 
+First, run the development server:
 
-### Available Scripts
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-In the project directory, you can run:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-##### `gatsby develop`
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Runs the app in the development mode.
-Open [http://localhost:8000](http://localhost:8000) to view it in the browser.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-##### `gatsby build`
+## Learn More
 
-Builds the app for production to the `public` folder.
+To learn more about Next.js, take a look at the following resources:
 
-Your app is ready to be deployed!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-##### `npm run deploy-dev`
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-Runs the previously defined build script and deploys everything in the `build` directory to my AWS S3 bucket used for testing.  This allows me to test my code on the AWS environment once last time before deploying to production.
+## Deploy on Vercel
 
-##### `npm run deploy-prod`
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Runs the previously defined build script and deploys everything in the `build` directory to my AWS S3 bucket used for production.  This will also invalidate the associated AWS CloudFront distrobution so that the edge locations know theres something new out there to cache and serve up to users.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

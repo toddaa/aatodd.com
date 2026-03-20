@@ -1,0 +1,14 @@
+import { SocialLinks } from "@/components/social-links";
+
+export function Footer() {
+  return (
+    <footer className="border-t relative z-[1]">
+      <div className="container mx-auto max-w-5xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <span className="font-mono text-xs text-muted-foreground tracking-wide">
+          &copy; {new Date().getFullYear()} Aaron Todd
+        </span>
+        <SocialLinks className="flex items-center gap-4" />
+      </div>
+    </footer>
+  );
+}

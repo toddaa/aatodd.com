@@ -43,6 +43,7 @@ export async function generateMetadata({
     return {
       title: post.title,
       description: post.description ?? undefined,
+      alternates: { canonical: `/blog/${slug}` },
       openGraph: {
         title: post.title,
         description: post.description ?? undefined,
@@ -51,7 +52,7 @@ export async function generateMetadata({
         images: post.featured_image
           ? [{ url: post.featured_image, width: 1200, height: 630 }]
           : undefined,
-        locale: "en",
+        locale: "en_US",
       },
       twitter: {
         card: "summary_large_image",
@@ -89,8 +90,24 @@ export default async function BlogPostPage({
 
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    author: { "@type": "Person", name: post.author },
+    datePublished: post.date,
+    url: `${siteConfig.url}/blog/${slug}`,
+    ...(post.featured_image && { image: post.featured_image }),
+  };
+
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        // Content is admin-authored from Supabase, not user input — trusted source
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="mb-10">
         <div className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-4 flex items-center gap-4">
           <span>{format(new Date(post.date), "yyyy.MM.dd")}</span>

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
@@ -7,8 +8,22 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Aaron Todd",
+    url: siteConfig.url,
+    jobTitle: "Software Engineer",
+    sameAs: Object.values(siteConfig.social),
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        // Static site config values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
           <span className="text-muted-foreground">//</span>
@@ -34,9 +49,9 @@ export default function AboutPage() {
 
         <div className="space-y-6">
           <div className="border border-border bg-card p-6">
-            <div className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
+            <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
               // who I am
-            </div>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               I&apos;m <strong className="text-foreground">Aaron Todd</strong>,
               a software developer from the Lansing, Michigan area. I consider
@@ -48,9 +63,9 @@ export default function AboutPage() {
           </div>
 
           <div className="border border-border bg-card p-6">
-            <div className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
+            <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
               // what I do
-            </div>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               Some projects have required me to get very hands-on with
               underlying infrastructure — IP networking and routing, server
@@ -62,9 +77,9 @@ export default function AboutPage() {
           </div>
 
           <div className="border border-border bg-card p-6">
-            <div className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
+            <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
               // what excites me
-            </div>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               These days I&apos;ve been focusing more on serverless technologies
               and running code on cloud platforms. I&apos;ve developed a real
@@ -75,9 +90,9 @@ export default function AboutPage() {
           </div>
 
           <div className="border border-border bg-card p-6">
-            <div className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
+            <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
               // beyond code
-            </div>
+            </h2>
             <p className="text-muted-foreground leading-relaxed">
               I love sharing knowledge with others — collaborating not just on
               how to do things but also why. In my spare time, I love spending

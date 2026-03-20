@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { PostCard } from "@/components/post-card";
 import type { Post } from "@/lib/types";
+
+export const metadata: Metadata = {
+  description:
+    "Aaron Todd's workshop — articles about web development, serverless architecture, and the craft of building software.",
+};
 
 export const revalidate = 3600;
 
@@ -47,12 +53,12 @@ export default async function HomePage() {
 
         <p className="mt-8 font-mono text-sm text-muted-foreground max-w-[50ch] leading-relaxed animate-fade-up delay-700">
           I&apos;m <strong className="text-foreground">Aaron Todd</strong> — a
-          software engineer who writes about the messy, beautiful process of
+          full-stack software engineer who writes about the messy, beautiful process of
           turning ideas into working software. This is my workshop.
         </p>
 
         <div className="mt-8 flex gap-2 flex-wrap animate-fade-up delay-900">
-          {["Next.js", "Architecture", "DevOps", "Craft"].map((tag) => (
+          {["React", "React Native", "Next.js", "AWS", "DevOps"].map((tag) => (
             <span
               key={tag}
               className="font-mono text-[0.65rem] uppercase tracking-widest px-3 py-1 border border-border text-muted-foreground transition-all duration-300 hover:border-neon hover:text-neon hover:neon-box-glow cursor-default"

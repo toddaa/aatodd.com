@@ -26,7 +26,7 @@ export default async function HomePage() {
   return (
     <div className="mx-auto max-w-5xl px-6">
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex flex-col justify-center py-20">
+      <section className="relative min-h-[85vh] flex flex-col justify-center py-20 overflow-hidden">
         <div className="hero-glow-primary" />
         <div className="hero-glow-secondary" />
 
@@ -108,7 +108,7 @@ export default async function HomePage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
           {[
             { value: posts.length || "—", label: "Articles" },
-            { value: "8+", label: "Years Building" },
+            { value: "15+", label: "Years Building" },
             { value: "∞", label: "Bugs Shipped" },
             { value: "1", label: "Coffee Addiction" },
           ].map(({ value, label }) => (

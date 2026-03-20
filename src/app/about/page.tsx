@@ -93,8 +93,8 @@ export default function AboutPage() {
       {/* Skills grid */}
       <div className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
         {[
-          { label: "Frontend", items: "React, Next.js, TypeScript" },
-          { label: "Backend", items: "Node.js, Python, Go" },
+          { label: "Frontend", items: "React, React Native, Next.js, TypeScript" },
+          { label: "Backend", items: "Node.js, PHP, Laravel" },
           { label: "Infra", items: "AWS, Docker, CI/CD" },
           { label: "Other", items: "Networking, Linux, OSS" },
         ].map(({ label, items }) => (

@@ -1,4 +1,4 @@
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { PostCard } from "@/components/post-card";
 import type { Post } from "@/lib/types";
 
@@ -8,7 +8,7 @@ export default async function HomePage() {
   let posts: Pick<Post, "id" | "title" | "slug" | "description" | "date" | "featured_image">[] = [];
 
   try {
-    const supabase = await createSupabaseServerClient();
+    const supabase = createSupabasePublicClient();
     const { data } = await supabase
       .from("posts")
       .select("id, title, slug, description, date, featured_image")

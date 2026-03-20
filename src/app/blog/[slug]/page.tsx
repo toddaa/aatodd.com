@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
-import { createSupabaseServerClient } from "@/lib/supabase/server";
+import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { Prose } from "@/components/prose";
 import { siteConfig } from "@/lib/constants";
 import type { Post } from "@/lib/types";
@@ -11,7 +11,7 @@ export const revalidate = 3600;
 
 export async function generateStaticParams() {
   try {
-    const supabase = await createSupabaseServerClient();
+    const supabase = createSupabasePublicClient();
     const { data: posts } = await supabase
       .from("posts")
       .select("slug")
@@ -30,7 +30,7 @@ export async function generateMetadata({
   const { slug } = await params;
 
   try {
-    const supabase = await createSupabaseServerClient();
+    const supabase = createSupabasePublicClient();
     const { data: post } = await supabase
       .from("posts")
       .select("title, description, featured_image")
@@ -75,7 +75,7 @@ export default async function BlogPostPage({
   let post: Post | null = null;
 
   try {
-    const supabase = await createSupabaseServerClient();
+    const supabase = createSupabasePublicClient();
     const { data } = await supabase
       .from("posts")
       .select("*")

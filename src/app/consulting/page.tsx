@@ -21,7 +21,7 @@ export default function ConsultingPage() {
         </p>
       </div>
 
-      <div className="space-y-6 max-w-3xl">
+      <div className="space-y-4 max-w-3xl">
         <div className="border border-border bg-card p-6">
           <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
             {/* what I build */}

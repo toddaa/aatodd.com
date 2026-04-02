@@ -89,7 +89,7 @@ export default async function HomePage() {
         )}
 
         {rest.length > 0 && (
-          <div className="flex flex-col gap-px mt-4">
+          <div className="flex flex-col gap-4 mt-4">
             {rest.map((post) => (
               <PostCard key={post.id} post={post} />
             ))}

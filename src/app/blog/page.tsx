@@ -44,7 +44,7 @@ export default async function BlogPage() {
           </p>
         </div>
       ) : (
-        <div className="flex flex-col gap-px">
+        <div className="flex flex-col gap-4">
           {posts.map((post) => (
             <PostCard key={post.id} post={post} />
           ))}

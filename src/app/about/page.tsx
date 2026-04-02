@@ -47,7 +47,7 @@ export default function AboutPage() {
           <div className="absolute -inset-2 border border-neon/20 pointer-events-none" />
         </div>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="border border-border bg-card p-6">
             <h2 className="font-mono text-xs text-neon uppercase tracking-widest mb-3">
               // who I am

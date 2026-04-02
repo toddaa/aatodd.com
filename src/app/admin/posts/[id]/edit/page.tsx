@@ -81,6 +81,13 @@ export default function EditPostPage({
         return;
       }
 
+      // Revalidate static pages so the changes appear immediately
+      await fetch("/api/revalidate-post", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug }),
+      }).catch(() => {});
+
       router.push("/admin");
     } finally {
       setSaving(false);

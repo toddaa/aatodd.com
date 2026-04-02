@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Aaron Todd — software developer from Lansing, Michigan.",
+  description: "About Aaron Todd — software engineer from Michigan.",
 };
 
 export default function AboutPage() {
@@ -54,11 +54,10 @@ export default function AboutPage() {
             </h2>
             <p className="text-muted-foreground leading-relaxed">
               I&apos;m <strong className="text-foreground">Aaron Todd</strong>,
-              a software developer from the Lansing, Michigan area. I consider
-              myself a generalist — I&apos;ve spent a lot of time learning and
-              getting to know many different technologies. Primarily, my career
-              has revolved around web development, from single pages to extremely
-              large SaaS platforms.
+              a full-stack software engineer from Michigan. I&apos;m a
+              generalist by nature — I&apos;ve spent my career learning
+              across the stack, from single-page apps to large-scale SaaS
+              platforms.
             </p>
           </div>
 
@@ -67,12 +66,11 @@ export default function AboutPage() {
               // what I do
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Some projects have required me to get very hands-on with
-              underlying infrastructure — IP networking and routing, server
-              hardware, and OS layer software. I&apos;ve even ported and
-              customized open source software to architectures they
-              weren&apos;t initially intended for. No need to reinvent the wheel
-              if you can just adapt it, right?
+              I&apos;ve gotten deep into the layers beneath the code —
+              IP networking, server hardware, and OS-level tooling. I&apos;ve
+              ported and customized open source software to architectures it
+              was never designed for. No need to reinvent the wheel if you
+              can adapt it, right?
             </p>
           </div>
 
@@ -81,11 +79,14 @@ export default function AboutPage() {
               // what excites me
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              These days I&apos;ve been focusing more on serverless technologies
-              and running code on cloud platforms. I&apos;ve developed a real
-              love for single page web apps using frameworks like React. Combined
-              with CI/CD build automation, I&apos;ve learned that you can create
-              a robust product that people get excited to be a part of.
+              These days I&apos;m deep in the cloud-native stack — serverless
+              functions, containers, and infrastructure-as-code on AWS. I build
+              web apps with React and Next.js, ship native mobile experiences
+              with React Native, and tie it all together with automated CI/CD
+              pipelines. I obsess over the developer experience that makes
+              engineering teams want to move fast — and just as much about
+              building tools that help non-technical teams streamline their
+              workflows and get more done without writing a line of code.
             </p>
           </div>
 
@@ -94,12 +95,13 @@ export default function AboutPage() {
               // beyond code
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              I love sharing knowledge with others — collaborating not just on
-              how to do things but also why. In my spare time, I love spending
-              time with my wife Alison and our three children Samantha, Connor,
-              and Emma. I&apos;m a unit leader to a Cub Scout group of almost 50
-              kids. Being an Eagle Scout, jumping back into scouting for the next
-              generation is a welcome opportunity.
+              Outside of work, everything revolves around family — my wife
+              Alison and our three kids Samantha, Connor, and Emma. As an Eagle
+              Scout, I&apos;ve stayed deeply involved in scouting, serving as
+              both a Scoutmaster and a Commissioner. Mentoring the next
+              generation is one of the most rewarding things I do —
+              it&apos;s an investment in the future of our world, one Scout
+              at a time.
             </p>
           </div>
         </div>
@@ -110,8 +112,8 @@ export default function AboutPage() {
         {[
           { label: "Frontend", items: "React, React Native, Next.js, TypeScript" },
           { label: "Backend", items: "Node.js, PHP, Laravel" },
-          { label: "Infra", items: "AWS, Docker, CI/CD" },
-          { label: "Other", items: "Networking, Linux, OSS" },
+          { label: "Infra", items: "AWS, Serverless, Docker, CI/CD" },
+          { label: "Other", items: "Networking, Linux, IaC" },
         ].map(({ label, items }) => (
           <div key={label} className="bg-background p-5">
             <div className="font-mono text-[0.6rem] uppercase tracking-[0.15em] text-neon mb-2">

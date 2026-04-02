@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { TiptapEditor } from "@/components/tiptap-editor";
+import { ImageUpload } from "@/components/image-upload";
 import type { Post } from "@/lib/types";
 
 export default function EditPostPage({
@@ -127,25 +128,16 @@ export default function EditPostPage({
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <div className="grid gap-2">
-            <Label htmlFor="author">Author</Label>
-            <Input
-              id="author"
-              value={author}
-              onChange={(e) => setAuthor(e.target.value)}
-            />
-          </div>
-          <div className="grid gap-2">
-            <Label htmlFor="featured_image">Featured Image URL</Label>
-            <Input
-              id="featured_image"
-              value={featuredImage}
-              onChange={(e) => setFeaturedImage(e.target.value)}
-              placeholder="https://..."
-            />
-          </div>
+        <div className="grid gap-2">
+          <Label htmlFor="author">Author</Label>
+          <Input
+            id="author"
+            value={author}
+            onChange={(e) => setAuthor(e.target.value)}
+          />
         </div>
+
+        <ImageUpload value={featuredImage} onChange={setFeaturedImage} />
 
         <div className="flex items-center gap-2">
           <Switch

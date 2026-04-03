@@ -62,7 +62,7 @@ export default function ConsultingPage() {
               "Mobile Apps (React Native)",
               "Cloud Infrastructure & AWS",
               "Serverless Architecture",
-              "CI/CD & DevOps",
+              "Containerization & CI/CD",
               "Business Process Automation",
             ].map((item) => (
               <div
@@ -90,7 +90,8 @@ export default function ConsultingPage() {
             className="mx-auto mb-4"
           />
           <p className="text-sm text-muted-foreground mt-2 mb-4">
-            Let&apos;s build something together.
+            Have a project in mind? Get in touch through my consultancy,
+            Mastodon Nrgy, to talk scope, timeline, and next steps.
           </p>
           <span className="inline-flex items-center gap-2 font-mono text-xs text-neon uppercase tracking-widest">
             Visit mastodonnrgy.com

@@ -5,7 +5,7 @@ import { ExternalLink } from "lucide-react";
 export const metadata: Metadata = {
   title: "Consulting",
   description:
-    "Custom software consulting — web apps, mobile, cloud infrastructure, and business automation through Mastodon Nrgy.",
+    "Custom software consulting: web apps, mobile, cloud infrastructure, and business automation through Mastodon Nrgy.",
 };
 
 export default function ConsultingPage() {
@@ -28,7 +28,7 @@ export default function ConsultingPage() {
             {"// what I build"}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            I help businesses turn ideas into working software — whether
+            I help businesses turn ideas into working software, whether
             that&apos;s a customer-facing web app, a mobile experience, or
             the internal tools that keep a team running smoothly. From
             greenfield builds to modernizing legacy systems, I work across
@@ -42,7 +42,7 @@ export default function ConsultingPage() {
             {"// how I work"}
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Every engagement starts with understanding the problem — not
+            Every engagement starts with understanding the problem, not
             just the technical requirements, but the business goals behind
             them. I embed with your team, move fast, and focus on outcomes
             over output. Whether you need architecture guidance, hands-on

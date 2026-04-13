@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 
 export async function proxy(request: NextRequest) {
-  // Skip proxy processing for auth callback — let the client handle the code exchange
+  // Skip proxy processing for auth callback; the client handles the code exchange
   if (request.nextUrl.pathname.startsWith("/admin/callback")) {
     return NextResponse.next({ request });
   }

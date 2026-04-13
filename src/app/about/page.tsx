@@ -4,7 +4,7 @@ import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "About Aaron Todd — software engineer from Michigan.",
+  description: "About Aaron Todd, software engineer from Michigan.",
 };
 
 export default function AboutPage() {
@@ -55,9 +55,8 @@ export default function AboutPage() {
             <p className="text-muted-foreground leading-relaxed">
               I&apos;m <strong className="text-foreground">Aaron Todd</strong>,
               a full-stack software engineer from Michigan. I&apos;m a
-              generalist by nature — I&apos;ve spent my career learning
-              across the stack, from single-page apps to large-scale SaaS
-              platforms.
+              generalist by nature. I&apos;ve spent my career learning across
+              the stack, from single-page apps to large-scale SaaS platforms.
             </p>
           </div>
 
@@ -66,7 +65,7 @@ export default function AboutPage() {
               // what I do
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              I&apos;ve gotten deep into the layers beneath the code —
+              I&apos;ve gotten deep into the layers beneath the code:
               IP networking, server hardware, and OS-level tooling. I&apos;ve
               ported and customized open source software to architectures it
               was never designed for. No need to reinvent the wheel if you
@@ -79,12 +78,12 @@ export default function AboutPage() {
               // what excites me
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              These days I&apos;m deep in the cloud-native stack — serverless
+              These days I&apos;m deep in the cloud-native stack: serverless
               functions, containers, and infrastructure-as-code on AWS. I build
               web apps with React and Next.js, ship native mobile experiences
               with React Native, and tie it all together with automated CI/CD
               pipelines. I obsess over the developer experience that makes
-              engineering teams want to move fast — and just as much about
+              engineering teams want to move fast, and just as much about
               building tools that help non-technical teams streamline their
               workflows and get more done without writing a line of code.
             </p>
@@ -95,13 +94,12 @@ export default function AboutPage() {
               // beyond code
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Outside of work, everything revolves around family — my wife
+              Outside of work, everything revolves around family: my wife
               Alison and our three kids Samantha, Connor, and Emma. As an Eagle
               Scout, I&apos;ve stayed deeply involved in scouting, serving as
               both a Scoutmaster and a Commissioner. Mentoring the next
-              generation is one of the most rewarding things I do —
-              it&apos;s an investment in the future of our world, one Scout
-              at a time.
+              generation is one of the most rewarding things I do. It&apos;s
+              an investment in the future of our world, one Scout at a time.
             </p>
           </div>
         </div>

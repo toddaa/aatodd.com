@@ -70,8 +70,34 @@ const youthRoles: RoleEntry[] = [
 ];
 
 export default function ServicePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://aatodd.com" },
+          { "@type": "ListItem", position: 2, name: "Scouting Service", item: "https://aatodd.com/service" },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        url: "https://aatodd.com/service",
+        name: "Aaron Todd - Scouting Service",
+        description:
+          "Aaron Todd Scouting America service: Eagle Scout, Division Commissioner, Scoutmaster, and lifelong volunteer.",
+        about: { "@id": "https://aatodd.com/#person" },
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        // Static page values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Page header */}
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">

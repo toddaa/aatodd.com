@@ -7,7 +7,13 @@ export function Footer() {
       <div className="container mx-auto max-w-5xl px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
           <span className="font-mono text-xs text-muted-foreground tracking-wide">
-            &copy; {new Date().getFullYear()} Aaron Todd
+            &copy; {new Date().getFullYear()}{" "}
+            <Link
+              href="/about"
+              className="hover:text-neon transition-colors"
+            >
+              Aaron Todd
+            </Link>
           </span>
         </div>
         <SocialLinks className="flex items-center gap-4" />

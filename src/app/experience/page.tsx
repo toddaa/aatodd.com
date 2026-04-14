@@ -108,8 +108,34 @@ const leadership = [
 ];
 
 export default function WorkPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://aatodd.com" },
+          { "@type": "ListItem", position: 2, name: "Experience", item: "https://aatodd.com/experience" },
+        ],
+      },
+      {
+        "@type": "WebPage",
+        url: "https://aatodd.com/experience",
+        name: "Aaron Todd - Experience",
+        description:
+          "Aaron Todd professional experience: 15+ years of software engineering, cloud architecture, React development, and technical leadership.",
+        about: { "@id": "https://aatodd.com/#person" },
+      },
+    ],
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        // Static page values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
           <span className="text-muted-foreground" aria-hidden="true">//</span>

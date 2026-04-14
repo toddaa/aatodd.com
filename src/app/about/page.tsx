@@ -12,38 +12,64 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Aaron Todd",
-    givenName: "Aaron",
-    familyName: "Todd",
-    url: siteConfig.url,
-    mainEntityOfPage: `${siteConfig.url}/about`,
-    image: `${siteConfig.url}/images/profile.png`,
-    jobTitle: "Full-Stack Software Engineer",
-    description:
-      "Aaron Todd is a full-stack software engineer from Michigan, Eagle Scout, and Scouting America volunteer.",
-    address: {
-      "@type": "PostalAddress",
-      addressRegion: "MI",
-      addressCountry: "US",
-    },
-    worksFor: {
-      "@type": "Organization",
-      name: "Roady's Truck Stops",
-    },
-    knowsAbout: [
-      "Software Engineering",
-      "React",
-      "React Native",
-      "Next.js",
-      "TypeScript",
-      "Node.js",
-      "AWS",
-      "Serverless",
-      "Cloud Architecture",
-      "DevOps",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.url },
+          { "@type": "ListItem", position: 2, name: "About Aaron Todd", item: `${siteConfig.url}/about` },
+        ],
+      },
+      {
+        "@type": "ProfilePage",
+        "@id": `${siteConfig.url}/about#profile`,
+        url: `${siteConfig.url}/about`,
+        name: "About Aaron Todd",
+        description:
+          "About Aaron Todd, a full-stack software engineer from Michigan. Eagle Scout and Scouting America volunteer.",
+        mainEntity: {
+          "@type": "Person",
+          "@id": `${siteConfig.url}/#person`,
+          name: "Aaron Todd",
+          givenName: "Aaron",
+          familyName: "Todd",
+          url: siteConfig.url,
+          image: `${siteConfig.url}/images/profile.png`,
+          jobTitle: "Full-Stack Software Engineer",
+          description:
+            "Aaron Todd is a full-stack software engineer from Michigan, Eagle Scout, and Scouting America volunteer.",
+          address: {
+            "@type": "PostalAddress",
+            addressRegion: "MI",
+            addressCountry: "US",
+          },
+          worksFor: {
+            "@type": "Organization",
+            name: "Roady's Truck Stops",
+            url: "https://roadys.com",
+          },
+          memberOf: {
+            "@type": "Organization",
+            name: "Scouting America",
+            url: "https://scouting.org",
+          },
+          award: "Eagle Scout",
+          knowsAbout: [
+            "Software Engineering",
+            "React",
+            "React Native",
+            "Next.js",
+            "TypeScript",
+            "Node.js",
+            "AWS",
+            "Serverless",
+            "Cloud Architecture",
+            "DevOps",
+          ],
+          sameAs: Object.values(siteConfig.social),
+        },
+      },
     ],
-    sameAs: Object.values(siteConfig.social),
   };
 
   return (
@@ -68,7 +94,7 @@ export default function AboutPage() {
           <div className="w-48 h-48 sm:w-full sm:h-auto sm:aspect-square border border-border overflow-hidden relative">
             <Image
               src="/images/profile.png"
-              alt="Aaron Todd"
+              alt="Aaron Todd, full-stack software engineer from Michigan"
               fill
               className="object-cover"
             />

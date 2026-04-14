@@ -6,11 +6,34 @@ import type { Post } from "@/lib/types";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Blog",
-  description: "Articles about web development, serverless, and cloud technologies.",
+  title: "Aaron Todd's Blog",
+  description:
+    "Articles by Aaron Todd on web development, React, Next.js, serverless, AWS, and the craft of shipping software.",
+  alternates: { canonical: "/blog" },
 };
 
 export default async function BlogPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://aatodd.com" },
+          { "@type": "ListItem", position: 2, name: "Blog", item: "https://aatodd.com/blog" },
+        ],
+      },
+      {
+        "@type": "Blog",
+        url: "https://aatodd.com/blog",
+        name: "Aaron Todd - Blog",
+        description:
+          "Articles by Aaron Todd on web development, React, Next.js, serverless, and AWS.",
+        author: { "@id": "https://aatodd.com/#person" },
+      },
+    ],
+  };
+
   let posts: Pick<Post, "id" | "title" | "slug" | "description" | "date" | "featured_image">[] = [];
 
   try {
@@ -27,9 +50,14 @@ export default async function BlogPage() {
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
+      <script
+        type="application/ld+json"
+        // Static page values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
-          <span className="text-muted-foreground">//</span>
+          <span className="text-muted-foreground" aria-hidden="true">//</span>
           Blog
         </h1>
         <p className="text-sm text-muted-foreground font-mono">

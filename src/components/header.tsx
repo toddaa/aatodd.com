@@ -27,9 +27,11 @@ export function Header() {
       <div className="container mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
         <Link
           href="/"
+          aria-label="Aaron Todd – home"
           className="font-mono text-sm text-neon neon-glow tracking-wide"
         >
-          &gt; aatodd.com
+          <span className="sr-only">Aaron Todd – </span>
+          <span aria-hidden="true">&gt; aatodd.com</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-1">

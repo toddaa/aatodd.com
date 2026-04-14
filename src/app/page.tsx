@@ -44,10 +44,12 @@ export default async function HomePage() {
   const personLd = {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": `${siteConfig.url}/#person`,
     name: "Aaron Todd",
     givenName: "Aaron",
     familyName: "Todd",
     url: siteConfig.url,
+    mainEntityOfPage: `${siteConfig.url}/about`,
     image: `${siteConfig.url}/images/profile.png`,
     jobTitle: "Full-Stack Software Engineer",
     description: siteConfig.description,
@@ -59,7 +61,14 @@ export default async function HomePage() {
     worksFor: {
       "@type": "Organization",
       name: "Roady's Truck Stops",
+      url: "https://roadys.com",
     },
+    memberOf: {
+      "@type": "Organization",
+      name: "Scouting America",
+      url: "https://scouting.org",
+    },
+    award: "Eagle Scout",
     knowsAbout: [
       "Software Engineering",
       "React",
@@ -106,12 +115,19 @@ export default async function HomePage() {
         <div className="hero-glow-primary" />
         <div className="hero-glow-secondary" />
 
+        <h1 className="sr-only">
+          Aaron Todd – Full-Stack Software Engineer from Michigan
+        </h1>
+
         <div className="font-mono text-xs text-muted-foreground animate-fade-up delay-200">
           <span className="text-neon">$</span> cat /dev/mind
           <span className="inline-block w-2 h-[1em] bg-neon ml-0.5 align-text-bottom animate-blink" />
         </div>
 
-        <h1 className="mt-6 text-5xl sm:text-7xl font-bold leading-[0.95] tracking-tight animate-glitch-in delay-400">
+        <div
+          aria-hidden="true"
+          className="mt-6 text-5xl sm:text-7xl font-bold leading-[0.95] tracking-tight animate-glitch-in delay-400"
+        >
           <span className="text-neon neon-glow-strong">Build.</span>
           <br />
           <span className="[-webkit-text-stroke:1.5px_#6b6b76] text-transparent">
@@ -119,12 +135,13 @@ export default async function HomePage() {
           </span>
           <br />
           <span>Ship.</span>
-        </h1>
+        </div>
 
         <p className="mt-8 font-mono text-sm text-muted-foreground max-w-[50ch] leading-relaxed animate-fade-up delay-700">
           I&apos;m <strong className="text-foreground">Aaron Todd</strong>, a
-          full-stack software engineer who writes about the messy, beautiful process of
-          turning ideas into working software. This is my workshop.
+          full-stack software engineer from Michigan who writes about the messy,
+          beautiful process of turning ideas into working software. This is my
+          workshop.
         </p>
 
         <div className="mt-8 flex gap-2 flex-wrap animate-fade-up delay-900">

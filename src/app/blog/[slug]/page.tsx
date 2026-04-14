@@ -90,14 +90,31 @@ export default async function BlogPostPage({
 
   if (!post) notFound();
 
+  const canonicalUrl = `${siteConfig.url}/blog/${slug}`;
+  const publishedIso = new Date(post.date).toISOString();
+  const modifiedIso = new Date(post.updated_at ?? post.date).toISOString();
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    author: { "@type": "Person", name: post.author },
-    datePublished: post.date,
-    url: `${siteConfig.url}/blog/${slug}`,
+    author: {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
+      name: post.author,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Person",
+      "@id": `${siteConfig.url}/#person`,
+      name: "Aaron Todd",
+      url: siteConfig.url,
+    },
+    datePublished: publishedIso,
+    dateModified: modifiedIso,
+    url: canonicalUrl,
+    mainEntityOfPage: canonicalUrl,
     ...(post.featured_image && { image: post.featured_image }),
   };
 

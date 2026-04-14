@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { Prose } from "@/components/prose";
+import { ReadingProgress } from "@/components/reading-progress";
 import { siteConfig } from "@/lib/constants";
 import type { Post } from "@/lib/types";
 
@@ -120,6 +121,7 @@ export default async function BlogPostPage({
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
+      <ReadingProgress />
       <script
         type="application/ld+json"
         // Content is admin-authored from Supabase, not user input. Trusted source.
@@ -134,11 +136,11 @@ export default async function BlogPostPage({
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
           {post.title}
         </h1>
-        {post.description && (
+        {/* {post.description && (
           <p className="mt-3 text-muted-foreground leading-relaxed">
             {post.description}
           </p>
-        )}
+        )} */}
         <div className="mt-6 h-px bg-gradient-to-r from-neon via-neon-secondary to-transparent" />
       </header>
 

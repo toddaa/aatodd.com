@@ -1,11 +1,23 @@
 import type { Metadata } from "next";
 import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { PostCard } from "@/components/post-card";
+import { siteConfig } from "@/lib/constants";
 import type { Post } from "@/lib/types";
 
 export const metadata: Metadata = {
+  title: {
+    absolute: "Aaron Todd – Full-Stack Software Engineer from Michigan",
+  },
   description:
-    "Aaron Todd's workshop. Articles about web development, serverless architecture, and the craft of building software.",
+    "Aaron Todd is a full-stack software engineer from Michigan. Articles on React, Next.js, React Native, AWS, serverless, and the craft of shipping software.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Aaron Todd – Full-Stack Software Engineer",
+    description:
+      "Aaron Todd is a full-stack software engineer from Michigan writing about React, Next.js, AWS, and serverless.",
+    url: siteConfig.url,
+    type: "website",
+  },
 };
 
 export const revalidate = 3600;
@@ -29,8 +41,66 @@ export default async function HomePage() {
   const featured = posts[0];
   const rest = posts.slice(1);
 
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Aaron Todd",
+    givenName: "Aaron",
+    familyName: "Todd",
+    url: siteConfig.url,
+    image: `${siteConfig.url}/images/profile.png`,
+    jobTitle: "Full-Stack Software Engineer",
+    description: siteConfig.description,
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "MI",
+      addressCountry: "US",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Roady's Truck Stops",
+    },
+    knowsAbout: [
+      "Software Engineering",
+      "React",
+      "React Native",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "AWS",
+      "Serverless",
+      "Cloud Architecture",
+      "DevOps",
+    ],
+    sameAs: Object.values(siteConfig.social),
+  };
+
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Aaron Todd",
+    alternateName: "aatodd.com",
+    url: siteConfig.url,
+    author: { "@type": "Person", name: "Aaron Todd" },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${siteConfig.url}/blog?q={search_term_string}`,
+      "query-input": "required name=search_term_string",
+    },
+  };
+
   return (
     <div className="mx-auto max-w-5xl px-6">
+      <script
+        type="application/ld+json"
+        // Static site config values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
+      />
+      <script
+        type="application/ld+json"
+        // Static site config values, not user input
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+      />
       {/* Hero */}
       <section className="relative min-h-[85vh] flex flex-col justify-center py-20 overflow-hidden">
         <div className="hero-glow-primary" />

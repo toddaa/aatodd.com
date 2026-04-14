@@ -3,8 +3,10 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About",
-  description: "About Aaron Todd, software engineer from Michigan.",
+  title: "About Aaron Todd",
+  description:
+    "About Aaron Todd, a full-stack software engineer from Michigan working in React, Next.js, React Native, AWS, and serverless. Eagle Scout and Scouting America volunteer.",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {
@@ -12,8 +14,35 @@ export default function AboutPage() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Aaron Todd",
+    givenName: "Aaron",
+    familyName: "Todd",
     url: siteConfig.url,
-    jobTitle: "Software Engineer",
+    mainEntityOfPage: `${siteConfig.url}/about`,
+    image: `${siteConfig.url}/images/profile.png`,
+    jobTitle: "Full-Stack Software Engineer",
+    description:
+      "Aaron Todd is a full-stack software engineer from Michigan, Eagle Scout, and Scouting America volunteer.",
+    address: {
+      "@type": "PostalAddress",
+      addressRegion: "MI",
+      addressCountry: "US",
+    },
+    worksFor: {
+      "@type": "Organization",
+      name: "Roady's Truck Stops",
+    },
+    knowsAbout: [
+      "Software Engineering",
+      "React",
+      "React Native",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "AWS",
+      "Serverless",
+      "Cloud Architecture",
+      "DevOps",
+    ],
     sameAs: Object.values(siteConfig.social),
   };
 
@@ -26,7 +55,7 @@ export default function AboutPage() {
       />
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
-          <span className="text-muted-foreground">//</span>
+          <span className="text-muted-foreground" aria-hidden="true">//</span>
           About
         </h1>
         <p className="text-sm text-muted-foreground font-mono">

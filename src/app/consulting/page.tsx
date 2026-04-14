@@ -3,9 +3,10 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Consulting",
+  title: "Consulting with Aaron Todd",
   description:
-    "Custom software consulting: web apps, mobile, cloud infrastructure, and business automation through Mastodon Nrgy.",
+    "Aaron Todd's custom software consulting. Web apps, React Native mobile, AWS cloud infrastructure, and business automation through Mastodon Nrgy.",
+  alternates: { canonical: "/consulting" },
 };
 
 export default function ConsultingPage() {
@@ -13,7 +14,7 @@ export default function ConsultingPage() {
     <div className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
-          <span className="text-muted-foreground">//</span>
+          <span className="text-muted-foreground" aria-hidden="true">//</span>
           Consulting
         </h1>
         <p className="text-sm text-muted-foreground font-mono">

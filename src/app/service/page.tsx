@@ -3,9 +3,10 @@ import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Service",
+  title: "Aaron Todd's Scouting Service",
   description:
-    "Aaron Todd's Scouting America service: Eagle Scout (Class of 1999), Commissioner, Scoutmaster, and lifelong volunteer.",
+    "Aaron Todd's Scouting America service. Eagle Scout (Class of 1999), Division Commissioner, Scoutmaster, and lifelong volunteer based in Michigan.",
+  alternates: { canonical: "/service" },
 };
 
 type RoleEntry = {
@@ -74,7 +75,7 @@ export default function ServicePage() {
       {/* Page header */}
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
-          <span className="text-muted-foreground">//</span>
+          <span className="text-muted-foreground" aria-hidden="true">//</span>
           Service
         </h1>
         <p className="text-sm text-muted-foreground font-mono">

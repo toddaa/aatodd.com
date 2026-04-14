@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Experience",
+  title: "Aaron Todd's Experience",
   description:
-    "Aaron Todd's professional experience: 15+ years of software engineering, cloud architecture, and technical leadership.",
+    "Aaron Todd's professional experience. 15+ years of software engineering, cloud architecture on AWS, React/React Native development, and technical leadership.",
+  alternates: { canonical: "/experience" },
 };
 
 const experience = [
@@ -111,8 +112,8 @@ export default function WorkPage() {
     <div className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-12">
         <h1 className="font-mono text-xs uppercase tracking-[0.2em] text-neon flex items-center gap-3 mb-4">
-          <span className="text-muted-foreground">//</span>
-          Work
+          <span className="text-muted-foreground" aria-hidden="true">//</span>
+          Experience
         </h1>
         <p className="text-sm text-muted-foreground font-mono">
           <span className="text-neon">$</span> git log --oneline career

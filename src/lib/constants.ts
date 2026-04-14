@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Aaron Todd",
   description:
-    "Software developer sharing experiences with web development, serverless, and cloud technologies.",
+    "Aaron Todd is a full-stack software engineer from Michigan writing about web development, serverless, cloud architecture, and the craft of shipping software.",
   url: "https://aatodd.com",
   social: {
     twitter: "https://twitter.com/toddaa",

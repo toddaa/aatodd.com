@@ -9,13 +9,6 @@ export function Footer() {
           <span className="font-mono text-xs text-muted-foreground tracking-wide">
             &copy; {new Date().getFullYear()} Aaron Todd
           </span>
-          <span className="text-border">|</span>
-          <Link
-            href="/service"
-            className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-neon/70 hover:text-neon transition-colors"
-          >
-            Eagle Scout
-          </Link>
         </div>
         <SocialLinks className="flex items-center gap-4" />
       </div>

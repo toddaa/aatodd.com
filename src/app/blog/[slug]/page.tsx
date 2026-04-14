@@ -6,6 +6,7 @@ import { createSupabasePublicClient } from "@/lib/supabase/server";
 import { Prose } from "@/components/prose";
 import { ReadingProgress } from "@/components/reading-progress";
 import { siteConfig } from "@/lib/constants";
+import { estimateReadMinutes } from "@/lib/utils";
 import type { Post } from "@/lib/types";
 
 export const revalidate = 3600;
@@ -94,6 +95,7 @@ export default async function BlogPostPage({
   const canonicalUrl = `${siteConfig.url}/blog/${slug}`;
   const publishedIso = new Date(post.date).toISOString();
   const modifiedIso = new Date(post.updated_at ?? post.date).toISOString();
+  const readMinutes = estimateReadMinutes(post.content);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -116,6 +118,7 @@ export default async function BlogPostPage({
     dateModified: modifiedIso,
     url: canonicalUrl,
     mainEntityOfPage: canonicalUrl,
+    timeRequired: `PT${readMinutes}M`,
     ...(post.featured_image && { image: post.featured_image }),
   };
 
@@ -132,6 +135,8 @@ export default async function BlogPostPage({
           <span>{format(new Date(post.date), "yyyy.MM.dd")}</span>
           <span className="text-border">|</span>
           <span>{post.author}</span>
+          <span className="text-border">|</span>
+          <span>{estimateReadMinutes(post.content)} min read</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight leading-tight">
           {post.title}

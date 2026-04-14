@@ -56,17 +56,13 @@ const youthRoles: RoleEntry[] = [
     org: "Boy Scouts of America",
     period: "May 1999",
   },
-  // {
-  //   role: "Philmont Trek",
-  //   org: "Philmont Scout Ranch",
-  //   period: "1996",
-  // },
   {
     role: "Vice Chief of Administration",
     org: "Order of the Arrow",
+    period: "1998-2000",
   },
   {
-    role: "Camp Staff (3 summers)",
+    role: "Camp Staff",
     org: "Northwoods Scout Reservation",
     period: "1996-1998",
   },
@@ -90,7 +86,7 @@ export default function ServicePage() {
       <section className="mb-16">
         <div className="grid sm:grid-cols-[240px_1fr] gap-8 items-start">
           <div className="relative mx-auto sm:mx-0 w-48 sm:w-full">
-            <div className="relative aspect-[1626/2000] border border-border bg-card overflow-hidden">
+            <div className="relative aspect-[1023/1000] border border-border bg-card overflow-hidden">
               <Image
                 src="/images/eagle-badge.jpg"
                 alt="Aaron Todd's Eagle Scout badge"

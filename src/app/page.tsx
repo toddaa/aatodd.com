@@ -5,7 +5,7 @@ import type { Post } from "@/lib/types";
 
 export const metadata: Metadata = {
   description:
-    "Aaron Todd's workshop — articles about web development, serverless architecture, and the craft of building software.",
+    "Aaron Todd's workshop. Articles about web development, serverless architecture, and the craft of building software.",
 };
 
 export const revalidate = 3600;
@@ -23,7 +23,7 @@ export default async function HomePage() {
       .limit(6);
     posts = data ?? [];
   } catch {
-    // Supabase not configured yet — show static content only
+    // Supabase not configured yet; show static content only
   }
 
   const featured = posts[0];
@@ -52,7 +52,7 @@ export default async function HomePage() {
         </h1>
 
         <p className="mt-8 font-mono text-sm text-muted-foreground max-w-[50ch] leading-relaxed animate-fade-up delay-700">
-          I&apos;m <strong className="text-foreground">Aaron Todd</strong> — a
+          I&apos;m <strong className="text-foreground">Aaron Todd</strong>, a
           full-stack software engineer who writes about the messy, beautiful process of
           turning ideas into working software. This is my workshop.
         </p>
@@ -113,7 +113,7 @@ export default async function HomePage() {
       <section className="pb-20">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-px bg-border border border-border">
           {[
-            { value: posts.length || "—", label: "Articles" },
+            { value: posts.length || "...", label: "Articles" },
             { value: "15+", label: "Years Building" },
             { value: "∞", label: "Bugs Shipped" },
             { value: "1", label: "Coffee Addiction" },

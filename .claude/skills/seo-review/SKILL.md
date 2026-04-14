@@ -20,7 +20,7 @@ Every page in `src/app/` MUST export either a static `metadata` object or a `gen
 - Missing metadata export (especially on new pages)
 - Missing or generic `title` (should be descriptive, under 60 chars)
 - Missing or generic `description` (should be compelling, 150-160 chars)
-- Title should use the template system — child pages export just `title`, root layout appends `| Aaron Todd`
+- Title should use the template system: child pages export just `title`, root layout appends `| Aaron Todd`
 
 **Blog posts specifically:**
 - `generateMetadata()` must set `openGraph.type` to `"article"`

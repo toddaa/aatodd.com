@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Aaron Todd — Build. Break. Ship.";
+export const alt = "Aaron Todd. Build. Break. Ship.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const runtime = "edge";
@@ -82,7 +82,7 @@ export default function Image() {
         >
           <span style={{ color: "#fafafa", fontWeight: 700 }}>Aaron Todd</span>
           <span style={{ marginLeft: 12 }}>
-            — Full-stack software engineer
+            | Full-stack software engineer
           </span>
         </div>
 

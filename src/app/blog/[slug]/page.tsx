@@ -105,7 +105,7 @@ export default async function BlogPostPage({
     <article className="mx-auto max-w-3xl px-6 py-16">
       <script
         type="application/ld+json"
-        // Content is admin-authored from Supabase, not user input — trusted source
+        // Content is admin-authored from Supabase, not user input. Trusted source.
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <header className="mb-10">

@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Aaron Todd's professional experience — 15+ years of software engineering, cloud architecture, and technical leadership.",
+    "Aaron Todd's professional experience: 15+ years of software engineering, cloud architecture, and technical leadership.",
 };
 
 const experience = [
   {
     title: "Director of Technology Services",
     company: "Roady's Truck Stops",
-    period: "Jan 2025 — Present",
+    period: "Jan 2025 - Present",
     bullets: [
       "Lead a team of developers and support staff delivering digital platforms serving a nationwide truck stop network with 50+ locations processing millions of fuel transactions annually",
       "Define technical strategy and architecture standards across web applications, mobile apps, and API integrations with major fuel card processors",
@@ -24,7 +24,7 @@ const experience = [
   {
     title: "Technical Lead",
     company: "Roady's Truck Stops",
-    period: "May 2022 — Dec 2024",
+    period: "May 2022 - Dec 2024",
     bullets: [
       "Architected and led migration of all database platforms to AWS RDS Aurora PostgreSQL, improving query performance by 40% and enabling horizontal scalability",
       "Directed development of customer-facing web applications using Node.js, React, and serverless AWS architecture serving thousands of daily active users",
@@ -36,7 +36,7 @@ const experience = [
   {
     title: "Software & DevOps Developer",
     company: "Roady's Truck Stops",
-    period: "Jul 2021 — May 2022",
+    period: "Jul 2021 - May 2022",
     bullets: [
       "Designed and deployed containerized REST API on AWS ECS, replacing legacy ad-hoc endpoints with scalable, maintainable architecture",
       "Built multi-language SMS messaging infrastructure supporting high-volume customer communications",
@@ -46,7 +46,7 @@ const experience = [
   {
     title: "Web Application Developer",
     company: "The H.T. Hackney Co.",
-    period: "Apr 2017 — Jul 2021",
+    period: "Apr 2017 - Jul 2021",
     bullets: [
       "Deployed customer-facing e-commerce websites to AWS using CloudFormation for automated, scalable infrastructure",
       "Architected scalable REST API web services and integrated React into the e-commerce platform",
@@ -57,7 +57,7 @@ const experience = [
   {
     title: "Senior Engineer",
     company: "LEIGHTRONIX, INC.",
-    period: "Apr 2012 — Apr 2017",
+    period: "Apr 2012 - Apr 2017",
     bullets: [
       "Developed multi-tenant SaaS video streaming platform delivering Live and VOD services with adaptive bitrate streaming and geographically-aware CDN",
       "Built subscription and licensing infrastructure securing premium services across video server appliance product line",
@@ -67,7 +67,7 @@ const experience = [
   {
     title: "Network Administrator",
     company: "LEIGHTRONIX, INC.",
-    period: "Jan 2001 — Apr 2012",
+    period: "Jan 2001 - Apr 2012",
     bullets: [
       "Managed enterprise network infrastructure including VPN, firewall, and server administration",
       "Led data center migration and network architecture redesign",
@@ -87,17 +87,17 @@ const leadership = [
   {
     role: "Council / Division Commissioner",
     org: "Michigan Crossroads Council (Scouting America)",
-    period: "May 2023 — Present",
+    period: "May 2023 - Present",
   },
   {
     role: "Scoutmaster",
     org: "Scout BSA",
-    period: "Aug 2020 — Present",
+    period: "Aug 2020 - Present",
   },
   {
     role: "Pack Committee Chair",
     org: "Cub Scouts",
-    period: "Aug 2019 — Present",
+    period: "Aug 2019 - Present",
   },
   {
     role: "Eagle Scout",

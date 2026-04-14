@@ -58,7 +58,7 @@ const youthRoles: RoleEntry[] = [
   },
   {
     role: "Vice Chief of Administration",
-    org: "Order of the Arrow",
+    org: "Gabe-Shi-Win-Gi-Ji-Kens Lodge - Order of the Arrow",
     period: "1998-2000",
   },
   {
